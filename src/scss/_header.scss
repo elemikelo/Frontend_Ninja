@@ -1,0 +1,44 @@
+// variables
+$header-background-color: $color-primary;
+$header-text-color: $color-white;
+$header-title-font: $titles-font-family;
+
+//style
+
+.header{
+  position: relative;
+  height: 50px;
+  width: auto;
+  background: $header-background-color;
+  padding: 10px;
+
+  .title{
+    position: absolute;
+    top:15px;
+    color: $header-text-color;
+    font-family: $titles-font-family;
+    margin: 0px;
+
+
+  }
+  .input-search{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border-radius: 4px;
+    width: 100px;
+    height: 20px;
+    font-family: $body-font-family;
+    font-size: $font-size-base;
+
+  }
+  .login_register{
+    position: absolute;
+    right: 150px;
+    top:30%;
+  }
+  .menu{
+
+  }
+
+}

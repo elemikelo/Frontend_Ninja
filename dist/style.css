@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik|Bungee+Inline");
+.header {
+  position: relative;
+  height: 50px;
+  width: auto;
+  background: #0EEBAC;
+  padding: 10px; }
+  .header .title {
+    position: absolute;
+    top: 15px;
+    color: #ffffff;
+    font-family: "Bungee Inline", serif;
+    margin: 0px; }
+  .header .input-search {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border-radius: 4px;
+    width: 100px;
+    height: 20px;
+    font-family: "Rubik", serif;
+    font-size: 16px; }
+  .header .login_register {
+    position: absolute;
+    right: 150px;
+    top: 30%; }
+
+body {
+  background: #F3EFEF;
+  color: #3A3E3E;
+  font-family: "Rubik", serif;
+  margin-left: 140px;
+  margin-right: 140px;
+  margin-top: 0px;
+  padding: 0px; }
