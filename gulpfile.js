@@ -6,7 +6,7 @@ var browserSync = require('browser-sync').create(); //importamos browser sync
 // definimos la tarea por defecto
 gulp.task("default", ["compile-sass"], function(){
 
-    // arrancar el servidor de browser sync
+    // arrancar el servidor de browser sync en el puerto 3000
     browserSync.init({
         server: "./"
     });

@@ -1,0 +1,30 @@
+// font families
+$main-font-family: "Rubik", serif;
+$titles-font-family: ;
+$body-font-family: $main-font-family;
+
+// font sizes
+$font-size-base: 16px;
+$font-size-small: $font-size-base - 6px;
+$font-size-large: $font-size-base + 6px;
+$font-size-h1: $font-size-base + 15px;
+$font-size-h2: $font-size-base + 12px;
+$font-size-h3: $font-size-base + 9px;
+$font-size-h4: $font-size-base + 6px;
+$font-size-h5: $font-size-base + 3px;
+$font-size-h6: $font-size-base;
+
+// colors
+$color-blue-off: #34495e;
+$color-blue-dark: #2c3e50;
+$color-green-water: #1abc9c;
+$color-green-water-dark: #1bc6a4;
+$color-white: #ecf0f1;
+$color-black: #000000;
+
+// components colors
+$color-primary: $color-blue-dark;
+$color-secondary: $color-blue-off;
+
+$main-text-color: $color-black;
+$body-background-color: $color-blue-dark;
