@@ -1,6 +1,6 @@
 // font families
 $main-font-family: "Rubik", serif;
-$titles-font-family: "Bungee Inline", serif;
+$titles-font-family: "Bungee Inline", cursive;
 $body-font-family: $main-font-family;
 
 // font sizes
@@ -29,3 +29,8 @@ $color-secondary: $color-white;
 
 $main-text-color: $color-grey-dark;
 $body-background-color: $color-grey;
+
+// responsive breakpoints
+$large-screen-width: 1024px; // iPad en landscape o superior
+$medium-screen-width: 768px; // iPad portrait
+$small-screen-width: $medium-screen-width - 1; // smartphones

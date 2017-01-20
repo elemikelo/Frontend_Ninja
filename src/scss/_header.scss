@@ -2,10 +2,38 @@
 $header-background-color: $color-primary;
 $header-text-color: $color-white;
 $header-title-font: $titles-font-family;
+$header-text-shadow: 2px 2px 0px darken($header-background-color, 20%);
 
-//style
-
+//style Mobile
 .header{
+  background: $header-background-color;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .title {
+      align-self: center;
+      color: $header-text-color;
+      width: auto;
+      margin: 0px;
+      text-shadow: 2px 2px 0px darken($header-background-color, 20%);
+      font-family: $header-title-font;
+      order:2;
+    }
+  .button_menu{
+      align-self: center;
+      order: 1;
+    }
+  .button_search{
+      align-self: center;
+      order: 3;
+    }
+}
+
+
+
+
+/*.header{
   position: relative;
   height: 50px;
   width: auto;
@@ -41,4 +69,4 @@ $header-title-font: $titles-font-family;
 
   }
 
-}
+}*/

@@ -1,35 +1,76 @@
-@import url("https://fonts.googleapis.com/css?family=Rubik|Bungee+Inline");
+@import url("https://fonts.googleapis.com/css?family=Rubik+16px|Bungee+Inline");
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
 .header {
+  background: #0EEBAC;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .header .title {
+    align-self: center;
+    color: #ffffff;
+    width: auto;
+    margin: 0px;
+    text-shadow: 2px 2px 0px #088b66;
+    font-family: "Bungee Inline", cursive;
+    order: 2; }
+  .header .button_menu {
+    align-self: center;
+    order: 1; }
+  .header .button_search {
+    align-self: center;
+    order: 3; }
+
+/*.header{
   position: relative;
   height: 50px;
   width: auto;
-  background: #0EEBAC;
-  padding: 10px; }
-  .header .title {
+  background: $header-background-color;
+  padding: 10px;
+
+  .title{
     position: absolute;
-    top: 15px;
-    color: #ffffff;
-    font-family: "Bungee Inline", serif;
-    margin: 0px; }
-  .header .input-search {
+    top:15px;
+    color: $header-text-color;
+    font-family: $titles-font-family;
+    margin: 0px;
+
+
+  }
+  .input-search{
     position: absolute;
     right: 20px;
     top: 20px;
     border-radius: 4px;
     width: 100px;
     height: 20px;
-    font-family: "Rubik", serif;
-    font-size: 16px; }
-  .header .login_register {
+    font-family: $body-font-family;
+    font-size: $font-size-base;
+
+  }
+  .login_register{
     position: absolute;
     right: 150px;
-    top: 30%; }
+    top:30%;
+  }
+  .menu{
 
+  }
+
+}*/
 body {
   background: #F3EFEF;
   color: #3A3E3E;
   font-family: "Rubik", serif;
-  margin-left: 140px;
-  margin-right: 140px;
-  margin-top: 0px;
+  font-size: 16px;
+  margin: 0px;
+  /*margin-left: 140px;
+    margin-right: 140px;
+    margin-top: 0px;*/
   padding: 0px; }
