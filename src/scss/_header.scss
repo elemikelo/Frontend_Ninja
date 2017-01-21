@@ -9,7 +9,8 @@ $header-text-shadow: 2px 2px 0px darken($header-background-color, 20%);
   background: $header-background-color;
   height: 80px;
   display: flex;
-  flex-wrap: wrap;
+  margin-bottom: 30px;
+  flex-wrap: nowrap;
   justify-content: space-around;
   .title {
       align-self: center;
