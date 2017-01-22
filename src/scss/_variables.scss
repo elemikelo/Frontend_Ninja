@@ -1,11 +1,12 @@
 // font families
-$main-font-family: "Rubik", serif;
-$titles-font-family: "Bungee Inline", cursive;
-$body-font-family: $main-font-family;
+$main-font-family: 'Open Sans', sans-serif;
+$titles-font-family: 'Roboto', sans-serif;
+$title-web-pag: 'Bungee Shade', cursive;
+
 
 // font sizes
 $font-size-base: 16px;
-$font-size-small: $font-size-base - 6px;
+$font-size-small: $font-size-base - 3px;
 $font-size-large: $font-size-base + 6px;
 $font-size-h1: $font-size-base + 15px;
 $font-size-h2: $font-size-base + 12px;
@@ -19,7 +20,7 @@ $color-elven-iris: #0EEBAC;
 $color-elven-song: #1abc9c;
 $color-elvens-luck: #6AFFB9;
 $color-elven: #CEFFEB;
-$color-grey: #F3EFEF;
+$color-grey: #808080;
 $color-grey-dark: #3A3E3E;
 $color-white: #ffffff;
 
@@ -28,7 +29,7 @@ $color-primary: $color-elven-iris;
 $color-secondary: $color-white;
 
 $main-text-color: $color-grey-dark;
-$body-background-color: $color-grey;
+$body-background-color: $color-white;
 
 // responsive breakpoints
 $large-screen-width: 1024px; // iPad en landscape o superior

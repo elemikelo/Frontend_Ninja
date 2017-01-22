@@ -2,72 +2,37 @@
 $header-background-color: $color-primary;
 $header-text-color: $color-white;
 $header-title-font: $titles-font-family;
-$header-text-shadow: 2px 2px 0px darken($header-background-color, 20%);
 
 //style Mobile
 .header{
   background: $header-background-color;
   height: 80px;
   display: flex;
-  margin-bottom: 30px;
   flex-wrap: nowrap;
   justify-content: space-around;
   .title {
       align-self: center;
       color: $header-text-color;
-      width: auto;
       margin: 0px;
-      text-shadow: 2px 2px 0px darken($header-background-color, 20%);
-      font-family: $header-title-font;
+      font-family: $title-web-pag;
       order:2;
     }
-  .button_menu{
+  .button-header{
+    border-radius:6px;
+    padding-top: 2px;
+    border:1px solid $header-text-color;
+    padding-bottom: 1px;
+    display:inline-block;
+    cursor:pointer;
+    text-decoration:none;
+    background-color: $color-primary;
+  }
+  #button-menu{
       align-self: center;
       order: 1;
     }
-  .button_search{
+  #button-search{
       align-self: center;
       order: 3;
     }
 }
-
-
-
-
-/*.header{
-  position: relative;
-  height: 50px;
-  width: auto;
-  background: $header-background-color;
-  padding: 10px;
-
-  .title{
-    position: absolute;
-    top:15px;
-    color: $header-text-color;
-    font-family: $titles-font-family;
-    margin: 0px;
-
-
-  }
-  .input-search{
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    border-radius: 4px;
-    width: 100px;
-    height: 20px;
-    font-family: $body-font-family;
-    font-size: $font-size-base;
-
-  }
-  .login_register{
-    position: absolute;
-    right: 150px;
-    top:30%;
-  }
-  .menu{
-
-  }
-
-}*/
