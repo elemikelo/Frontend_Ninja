@@ -15,7 +15,7 @@ $color-title-articles: $main-text-color;
     font-family: $titles-font-family;
     color: $color-title-articles;
     font-size: $font-size-h2;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 10px 0px 10px;
     margin:0;
     a:link{
       text-decoration: none;
@@ -26,7 +26,7 @@ $color-title-articles: $main-text-color;
     flex-direction: row;
     flex-wrap: wrap;
     height: auto;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 10px 10px 10px;
     .photo-author-article{
       align-self: center;
       width: 32px;
@@ -58,13 +58,22 @@ $color-title-articles: $main-text-color;
       font-size: $font-size-small;
     }
     button{
-      padding: 0;
-      border: 0;
+      margin: 2px;
+      border-radius: 5px;
+      padding: 4px 9px 3px 8px;
+      border: 1px solid $color-primary;
+
     	background-color: $color-white;
-      color: $color-elven-song;
-      font-size: $font-size-base;
+      color: $color-primary;
     	cursor:pointer;
-    	text-decoration:none;
+    	// text-decoration:none;
+      .comments-number{
+        position: relative;
+        bottom: 3px;
+        margin-left: 3px;
+        font-size: $font-size-base;
+
+      }
     }
   }
   .container-buttons-pag{

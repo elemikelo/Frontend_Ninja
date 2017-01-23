@@ -55,7 +55,7 @@ a:link {
   font-family: "Roboto", sans-serif;
   color: #3A3E3E;
   font-size: 28px;
-  padding: 0px 20px 0px 20px;
+  padding: 0px 10px 0px 10px;
   margin: 0; }
   .title-article a:link {
     text-decoration: none; }
@@ -65,7 +65,7 @@ a:link {
   flex-direction: row;
   flex-wrap: wrap;
   height: auto;
-  padding: 10px 20px 10px 20px; }
+  padding: 10px 10px 10px 10px; }
   .prueba .photo-author-article {
     align-self: center;
     width: 32px;
@@ -91,13 +91,18 @@ a:link {
     color: #808080;
     font-size: 13px; }
   .prueba button {
-    padding: 0;
-    border: 0;
+    margin: 2px;
+    border-radius: 5px;
+    padding: 4px 9px 3px 8px;
+    border: 1px solid #0EEBAC;
     background-color: #ffffff;
-    color: #1abc9c;
-    font-size: 16px;
-    cursor: pointer;
-    text-decoration: none; }
+    color: #0EEBAC;
+    cursor: pointer; }
+    .prueba button .comments-number {
+      position: relative;
+      bottom: 3px;
+      margin-left: 3px;
+      font-size: 16px; }
 
 .container-buttons-pag {
   display: flex;
