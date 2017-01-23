@@ -54,6 +54,29 @@
     	text-decoration:none;
     }
   }
+  .container-buttons-pag{
+    display: flex;
+    padding:0 20px 30px 20px;
+    .button-previous-pag{
+      order:0;
+    }
+    .button-next-pag{
+      order:1;
+      margin-left: auto;
+    }
+  }
+  .button-pag{
+    padding-left: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 8px;
+  	background-color: $color-white;
+  	border-radius:100%;
+  	border:1px solid $color-primary;
+  	display:inline-block;
+  	cursor:pointer;
+  	text-decoration:none;
+  }
 
   video{
     max-width: 100%;

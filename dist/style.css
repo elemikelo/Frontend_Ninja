@@ -88,6 +88,27 @@ body {
     cursor: pointer;
     text-decoration: none; }
 
+.container-buttons-pag {
+  display: flex;
+  padding: 0 20px 30px 20px; }
+  .container-buttons-pag .button-previous-pag {
+    order: 0; }
+  .container-buttons-pag .button-next-pag {
+    order: 1;
+    margin-left: auto; }
+
+.button-pag {
+  padding-left: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 8px;
+  background-color: #ffffff;
+  border-radius: 100%;
+  border: 1px solid #0EEBAC;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none; }
+
 video {
   max-width: 100%;
   height: 250px; }
