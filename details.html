@@ -2,9 +2,64 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="/dist/style.css">
     <title></title>
   </head>
   <body>
+    <body>
+      <header class="header">
+        <h1 class="title">logo</h1>
+        <button class="button-header" id="button-menu"><img src="img/icons/button_menu.png" alt="button_menu"></button>
+        <button class="button-header" id="button-search"><img src="img/icons/button_search.png" alt="button_menu"></button>
+        <!--<input class="input-search" type="text" name="" value="" placeholder="Search">
+        <div class="login_register">
+          <a href="#" id="loginform">Login</a> | <a href="#">Register</a>
+        </div>-->
+        <!-- Menu horizontal con categorias tematicas -->
+      </header>
+
+      <main class="container-main">
+          <section class="detail-article">
+            <article class="article" id="article-cine">
+              <img class="img-article" src="./img/articles/cine.jpg" alt="article cine">
+              <h2 class="title-article">Batman Begin</h2>
+              <div class="prueba">
+                <img class="photo-author-article" src="./img/authors/stevejobs.jpg"  alt="author img">
+                <div class="name-author-article">Fulanito Rodriquez</div>
+                <div class="icons">
+                  <button class="buttons-icons-social"><img src="./img/icons/icon-like-24-green.png" alt="icon button like" class="icon-likes"></button>
+                  <button class="buttons-icons-social"><img src="./img/icons/icon-comment-24-green.png" alt="icon button comment" class="icon-comments"></button>
+                </div>
+                <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="date"> 1 month ago</div>
+              </div>
+            </article>
+          </section>
+
+          <section class="comments">
+            <div class="list-comments">
+              <h2>Comments</h2>
+              <ul>
+                <li>Luismi: Es un ejemplo para ver como queda</li>
+              </ul>
+            </div>
+            <div class="add-comments">
+              <h2>Add your comment</h2>
+              <form type="hidden" class"form" novalidate>
+                <input type="text" name="name" id="name" class="name" placeholder="Name">
+                <input type="text" name="last-name" id="last_name" class="last-name" placeholder="Last Name">
+                <input type="text" name="email" id="email" class="email" placeholder="Email">
+                <textarea  name="comment" class="comment" id="comment" placeholder="Write your comment!"></textarea>
+                <button class="button" id='sendNewComment'>Add Comment</button>
+              </form>
+            </div>
+
+
+          </section>
+
+          </div>
+
 
   </body>
 </html>

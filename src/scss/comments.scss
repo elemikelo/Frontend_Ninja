@@ -1,0 +1,50 @@
+//variables
+
+//style
+h2{
+  color: $color-grey;
+}
+.list-comments{
+  padding: 0px 20px 20px 20px;
+  ul{
+    padding: 0;
+  }
+  li{
+    list-style: none;
+  }
+}
+.add-comments{
+  background-color: $color-elven;
+  padding: 10px 20px 20px 20px;
+
+form{
+  display: flex;
+  flex-direction: column;
+
+  input, textarea {
+      transition: background-color 0.25s;
+      border: 1px solid $color-primary;
+      margin: 5px 0 15px 0px;
+      padding: 10px;
+      font-size: $font-size-base;
+      border-radius: 3px;
+      &:focus {
+          outline-color: $color-primary;
+          background-color: darken(white, 5%);
+      }
+  }
+  button {
+      @extend input;
+      background-color: $color-primary;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $main-text-color;
+      &:hover { // button:hover
+          background-color: lighten($color-primary, 10%);
+      }
+      &:active { // button:active -> click
+          background-color: darken($color-primary, 10%);
+      }
+  }
+}
+}
