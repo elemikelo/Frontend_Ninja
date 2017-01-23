@@ -20,9 +20,9 @@
     order: 2;
     text-shadow: 2px 2px 0px #088b66; }
   .header .button-header {
-    border-radius: 4px;
-    padding-top: 2px;
-    border: 2px solid #ffffff;
+    border-radius: 5px;
+    padding-top: 3px;
+    border: 1px solid #ffffff;
     padding-bottom: 1px;
     display: inline-block;
     cursor: pointer;
@@ -51,14 +51,16 @@ body {
 a:link {
   text-decoration: none; }
 
-.title-article {
-  font-family: "Roboto", sans-serif;
-  color: #3A3E3E;
-  font-size: 28px;
-  padding: 0px 10px 0px 10px;
-  margin: 0; }
-  .title-article a:link {
-    text-decoration: none; }
+.container-title {
+  display: flex; }
+  .container-title .title-article {
+    font-family: "Roboto", sans-serif;
+    color: #3A3E3E;
+    font-size: 28px;
+    padding: 0px 10px 0px 10px;
+    margin: 0; }
+    .container-title .title-article a:link {
+      text-decoration: none; }
 
 .prueba {
   display: flex;
@@ -85,7 +87,7 @@ a:link {
   .prueba .text {
     color: #808080;
     margin-bottom: 10px;
-    text-align: center; }
+    text-align: left; }
   .prueba .date {
     margin-left: auto;
     color: #808080;
@@ -93,7 +95,7 @@ a:link {
   .prueba button {
     margin: 2px;
     border-radius: 5px;
-    padding: 4px 9px 3px 8px;
+    padding: 6px 9px 3px 8px;
     border: 1px solid #0EEBAC;
     background-color: #ffffff;
     color: #0EEBAC;

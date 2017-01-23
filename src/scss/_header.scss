@@ -19,9 +19,9 @@ $header-title-font: $titles-font-family;
       text-shadow: 2px 2px 0px darken($header-background-color, 20%);
     }
   .button-header{
-    border-radius:4px;
-    padding-top: 2px;
-    border:2px solid $header-text-color;
+    border-radius:5px;
+    padding-top: 3px;
+    border:1px solid $header-text-color;
     padding-bottom: 1px;
     display:inline-block;
     cursor:pointer;

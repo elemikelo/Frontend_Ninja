@@ -11,16 +11,20 @@ $color-title-articles: $main-text-color;
   a:link{
     text-decoration: none;
   }
-  .title-article{
-    font-family: $titles-font-family;
-    color: $color-title-articles;
-    font-size: $font-size-h2;
-    padding: 0px 10px 0px 10px;
-    margin:0;
-    a:link{
-      text-decoration: none;
-    }
+  .container-title{
+    display:flex;
+    .title-article{
+      font-family: $titles-font-family;
+      color: $color-title-articles;
+      font-size: $font-size-h2;
+      padding: 0px 10px 0px 10px;
+      margin:0;
+      a:link{
+        text-decoration: none;
+      }
+    }  
   }
+
   .prueba{
     display: flex;
     flex-direction: row;
@@ -50,7 +54,7 @@ $color-title-articles: $main-text-color;
     .text{
       color: $color-grey;
       margin-bottom: 10px;
-      text-align: center;
+      text-align: left;
     }
     .date{
       margin-left: auto;
@@ -60,7 +64,7 @@ $color-title-articles: $main-text-color;
     button{
       margin: 2px;
       border-radius: 5px;
-      padding: 4px 9px 3px 8px;
+      padding: 6px 9px 3px 8px;
       border: 1px solid $color-primary;
 
     	background-color: $color-white;
