@@ -2,14 +2,26 @@
 $color-title-articles: $main-text-color;
 
 //style
-  .img-article{
-    width: 100%;
-    padding-bottom: 20px;
-    padding-top: 80px;
+.container-article{
+  @include if-is-medium-screen{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 
-  a:link{
-    text-decoration: none;
+  .img-article{
+    width: 100%;
+    padding: 80px 0px 20px 0px;
+    @include if-is-medium-screen{
+      width: 50%;
+      height: 250px;
+      padding-left: 10px;
+    }
+  }
+  .container-content{
+    @include if-is-medium-screen{
+      padding-top: 80px;
+    }
   }
   .container-title{
     display:flex;
@@ -19,13 +31,9 @@ $color-title-articles: $main-text-color;
       font-size: $font-size-h2;
       padding: 0px 10px 0px 10px;
       margin:0;
-      a:link{
-        text-decoration: none;
-      }
-    }  
+    }
   }
-
-  .prueba{
+  .container-content-details{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -41,7 +49,7 @@ $color-title-articles: $main-text-color;
       color: $color-grey;
       align-self: center;
       padding-left: 10px;
-      font-size: $font-size-small;
+      font-size: $font-size-base;
     }
     .date-article{
       align-self: center;
@@ -66,7 +74,6 @@ $color-title-articles: $main-text-color;
       border-radius: 5px;
       padding: 6px 9px 3px 8px;
       border: 1px solid $color-primary;
-
     	background-color: $color-white;
       color: $color-primary;
     	cursor:pointer;
@@ -76,7 +83,6 @@ $color-title-articles: $main-text-color;
         bottom: 3px;
         margin-left: 3px;
         font-size: $font-size-base;
-
       }
     }
   }
@@ -99,4 +105,10 @@ $color-title-articles: $main-text-color;
   video{
     max-width: 100%;
     height: 250px;
+    padding: 60px 0px 20px 0px;
+    @include if-is-medium-screen{
+      padding-left: 10px;
+      width: 50%;
+    }
   }
+}

@@ -5,4 +5,7 @@ body {
     font-size: $font-size-base;
     margin: 0px;
     padding: 0px;
+    a:link{
+      text-decoration: none;
+    }
 }
