@@ -8,32 +8,63 @@
 
 .header {
   background: #0EEBAC;
-  height: 80px;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around; }
-  .header .title {
-    align-self: center;
-    color: #ffffff;
-    margin: 0px;
-    font-family: "Fredoka One", cursive;
-    order: 2;
-    text-shadow: 2px 2px 0px #088b66; }
-  .header .button-header {
-    border-radius: 5px;
-    padding-top: 3px;
-    border: 1px solid #ffffff;
-    padding-bottom: 1px;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    background-color: #0EEBAC; }
-  .header #button-menu {
-    align-self: center;
-    order: 1; }
-  .header #button-search {
-    align-self: center;
-    order: 3; }
+  width: 100%;
+  top: 0; }
+  .header .menu {
+    width: 90%;
+    max-width: 1064px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    @media screen and (max-width: 800px) {
+      .header .menu {
+        flex-direction: column; } }
+    .header .menu .container-title {
+      display: inline-block;
+      margin-right: 1em; }
+      @media screen and (max-width: 800px) {
+        .header .menu .container-title {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+          padding: 1em; } }
+      .header .menu .container-title .title {
+        color: #ffffff;
+        font-family: "Fredoka One", cursive;
+        padding-left: 5px;
+        font-size: 30px;
+        align-self: center;
+        margin: 0;
+        text-shadow: 2px 2px 0px #088b66; }
+    .header .menu .btn-menu {
+      display: none; }
+    .header .menu .categorias {
+      display: inline-block;
+      text-align: right; }
+      .header .menu .categorias a {
+        color: #ffffff;
+        text-shadow: 1px 1px 0px #055b42;
+        display: inline-block;
+        padding: 1.3em;
+        text-align: center; }
+        .header .menu .categorias a:hover {
+          background-color: #1abc9c; }
+        .header .menu .categorias a .icono-user {
+          margin-right: 5px;
+          margin-bottom: -2px; }
+      .header .menu .categorias .input-search {
+        display: none;
+        width: 100px;
+        padding: 7px 5px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none; }
+        .header .menu .categorias .input-search:focus {
+          outline: none;
+          box-shadow: 0px 0px 1px 1px #3A3E3E; }
 
 body {
   background: #F3EFEF;
@@ -157,6 +188,7 @@ footer {
           margin-left: 3px;
           font-size: 16px; }
   .list-articles .container-buttons-pag {
+    width: 100%;
     display: flex;
     background-color: #ffffff;
     padding: 30px 20px 30px 20px; }
