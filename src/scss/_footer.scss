@@ -1,7 +1,6 @@
 //variables
 
 //style
-
 footer{
   display: flex;
   flex-direction: row;
@@ -21,5 +20,9 @@ footer{
     border: 1px solid $color-elven-iris;
     border-radius: 5px;
     box-shadow: 2px;
+    cursor: pointer;
+    &:hover{
+      background: $color-grey-light;
+    }
   }
 }

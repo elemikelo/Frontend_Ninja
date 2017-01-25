@@ -21,6 +21,7 @@ $color-elven-song: #1abc9c;
 $color-elvens-luck: #6AFFB9;
 $color-elven: #CEFFEB;
 $color-grey: #808080;
+$color-grey-light: #F3EFEF;
 $color-grey-dark: #3A3E3E;
 $color-white: #ffffff;
 
@@ -29,7 +30,7 @@ $color-primary: $color-elven-iris;
 $color-secondary: $color-white;
 
 $main-text-color: $color-grey-dark;
-$body-background-color: $color-white;
+$body-background-color: $color-grey-light;
 
 // responsive breakpoints
 $large-screen-width: 1024px; // iPad en landscape o superior
