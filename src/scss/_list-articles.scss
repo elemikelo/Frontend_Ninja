@@ -19,8 +19,8 @@ $color-title-articles: $main-text-color;
       }
     }
     .img-article{
-      width: 100%;
-      padding: 80px 20px 20px 0px;
+      max-width: 100%;
+      padding: 80px 0;
       @include if-is-medium-screen{
         padding-right: 10px;
         width: 50%;

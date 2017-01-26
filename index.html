@@ -10,33 +10,27 @@
     </script>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
+      <div class="container-header">
+        <h1 class="title">logo</h1>
+        <div class="prueba">
+          <input type="checkbox" id="btn-menu">
+          <label for="btn-menu"><img src="img/icons/button_menu.svg" alt="button_menu"></label>
       <nav class="menu">
-        <div class="container-title">
-            <h1 class="title">logo</h1>
-            <button class="btn-menu" id="button-menu"><img src="img/icons/button_menu.png" alt="button_menu"></button>
-        </div>
-
-        <div class="categorias">
-          <a href="#">Sport</a>
-          <a href="#">Technology</a>
-          <a href="#">Cine</a>
-          <a href="#">Health</a>
-          <a href="#">More</a>
-          <a href="#"><img class="icono-user" src="./img/icons/icon-user.svg" alt="Icon user"></i>Sign in</a>
-          <input class="input-search" type="text" name="" value="" placeholder="Search...">
-        </div>
-        <!-- <input class="input-search" type="text" name="" value="" placeholder="Search"> -->
+        <ul>
+          <li><a href="#" class="name-category">Sport</a></li>
+          <li><a href="#" class="name-category">Technology</a></li>
+          <li><a href="#" class="name-category">Cine</a></li>
+          <li><a href="#" class="name-category">Health</a></li>
+          <li><a href="#" class="name-category">More</a></li>
+          <li><a href="#" class="name-category"><img class="icono-user" src="./img/icons/icon-user.svg" alt="Icon user"></img>Sign in</a></li>
+          <li><a href="#" class="illo"><input class="input-search" type="text" name="" value="" placeholder="Search..."></a></li>
+        </ul>
       </nav>
+      </div>
+    </div>
 
-      <!-- <button class="button-header" id="button-menu"><img src="img/icons/button_menu.png" alt="button_menu"></button> -->
-      <!-- <button class="button-header" id="button-search"><img src="img/icons/button_search.png" alt="button_search"></button> -->
-      <!--<input class="input-search" type="text" name="" value="" placeholder="Search">
-      <div class="login_register">
-        <a href="#" id="loginform">Login</a> | <a href="#">Register</a>
-
-      <!-- Menu horizontal con categorias tematicas -->
-    </header>
+  </header>
 
     <main class="container-main">
 
@@ -246,7 +240,7 @@
      <div class="text-footer">
        Copyright © 2017 Logo Inc.
      </div>
-    <button type="button" class="button-go-to-up">Go to up</button>
+    <a href="#header"><button type="button" class="button-go-to-up">Go to up</button></a>
   </footer>
 
   </body>
