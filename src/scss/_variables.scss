@@ -31,8 +31,12 @@ $color-secondary: $color-white;
 
 $main-text-color: $color-grey-dark;
 $body-background-color: $color-grey-light;
+$color-title-articles: $color-grey-dark;
 
 // responsive breakpoints
 $large-screen-width: 1024px; // iPad en landscape o superior
 $medium-screen-width: 768px; // iPad portrait
 $small-screen-width: $medium-screen-width - 1; // smartphones
+
+//other
+$border-standard: 5px;

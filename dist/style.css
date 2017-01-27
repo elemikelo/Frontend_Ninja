@@ -14,6 +14,7 @@
     width: 100%;
     max-width: 1064px;
     display: flex;
+    flex-wrap: wrap;
     margin: auto; }
     .header .container-header .title {
       color: #ffffff;
@@ -23,57 +24,57 @@
       align-self: center;
       margin: 0;
       text-shadow: 2px 2px 0px #088b66; }
-    .header .container-header .prueba {
+    .header .container-header .container-category {
       margin-left: auto; }
-      .header .container-header .prueba #btn-menu {
+      .header .container-header .container-category #btn-menu {
         display: none; }
-        @media (max-width: 800px) {
-          .header .container-header .prueba #btn-menu:checked ~ .menu {
+        @media all and (max-width: 800px) {
+          .header .container-header .container-category #btn-menu:checked ~ .menu {
             display: block; } }
-        @media (max-width: 800px) {
-          .header .container-header .prueba #btn-menu:checked ~ ul {
+        @media all and (max-width: 800px) {
+          .header .container-header .container-category #btn-menu:checked ~ ul {
             border: 1px solid #1abc9c; } }
-      .header .container-header .prueba label {
+      .header .container-header .container-category label {
         display: none;
         width: 30px;
         height: 30px;
         padding: 1em;
         border-radius: 5px; }
-        .header .container-header .prueba label:hover {
+        .header .container-header .container-category label:hover {
           background-color: #1abc9c;
           cursor: pointer; }
-        @media (max-width: 800px) {
-          .header .container-header .prueba label {
+        @media all and (max-width: 800px) {
+          .header .container-header .container-category label {
             display: block; } }
-      @media (max-width: 800px) {
-        .header .container-header .prueba .menu {
+      @media all and (max-width: 800px) {
+        .header .container-header .container-category .menu {
           display: none;
           position: absolute;
           right: 0;
           width: auto;
           text-align: center;
           background: #0EEBAC; } }
-      .header .container-header .prueba .menu ul {
+      .header .container-header .container-category .menu ul {
         margin: 0;
         list-style: none;
         padding: 0;
         display: flex; }
-        @media (max-width: 800px) {
-          .header .container-header .prueba .menu ul {
+        @media all and (max-width: 800px) {
+          .header .container-header .container-category .menu ul {
             flex-direction: column; } }
-        .header .container-header .prueba .menu ul li .name-category {
+        .header .container-header .container-category .menu ul li .name-category {
           box-sizing: border-box;
           display: block;
           color: #ffffff;
           text-shadow: 1px 1px 0px #055b42;
           padding: 20px; }
-          .header .container-header .prueba .menu ul li .name-category .icono-user {
+          .header .container-header .container-category .menu ul li .name-category .icono-user {
             position: relative;
             top: 2px;
             padding-right: 5px; }
-          .header .container-header .prueba .menu ul li .name-category:hover {
+          .header .container-header .container-category .menu ul li .name-category:hover {
             background-color: #1abc9c; }
-        .header .container-header .prueba .menu ul li .input-search {
+        .header .container-header .container-category .menu ul li .input-search {
           text-align: center;
           width: 100px;
           height: 25px;
@@ -81,7 +82,7 @@
           font-size: 13px;
           border-radius: 5px;
           border: none; }
-          .header .container-header .prueba .menu ul li .input-search:focus {
+          .header .container-header .container-category .menu ul li .input-search:focus {
             outline: none;
             box-shadow: 0px 0px 1px 1px #3A3E3E; }
 
@@ -225,38 +226,157 @@ footer {
       .list-articles .container-buttons-pag .button-next-pag:hover {
         cursor: pointer; }
 
-h2 {
-  color: #808080; }
-
-.list-comments {
-  padding: 0px 20px 20px 20px; }
-  .list-comments ul {
+.comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .comments h2 {
+    color: #808080;
+    padding: 0 10px; }
+  @media all and (min-width: 1024px) {
+    .comments .list-comments {
+      margin: auto;
+      width: 1024px; } }
+  .comments .list-comments ul {
     padding: 0; }
-  .list-comments li {
-    list-style: none; }
+  .comments .list-comments li {
+    list-style: none;
+    padding: 0 10px; }
+  .comments .add-comments {
+    background-color: #CEFFEB; }
+    @media all and (min-width: 1024px) {
+      .comments .add-comments {
+        margin: auto;
+        width: 1024px;
+        padding: 0 20px; } }
+    .comments .add-comments form {
+      display: flex;
+      flex-direction: column;
+      padding: 0 10px; }
+      .comments .add-comments form input, .comments .add-comments form button, .comments .add-comments form textarea {
+        transition: background-color 0.25s;
+        border: 1px solid #0EEBAC;
+        margin: 5px 0 15px 0px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 3px; }
+        .comments .add-comments form input:focus, .comments .add-comments form button:focus, .comments .add-comments form textarea:focus {
+          outline-color: #0EEBAC;
+          background-color: #f2f2f2; }
+      .comments .add-comments form button {
+        background-color: #0EEBAC;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #3A3E3E; }
+        .comments .add-comments form button:hover {
+          background-color: #39f3be; }
+        .comments .add-comments form button:active {
+          background-color: #0bbb89; }
 
-.add-comments {
-  background-color: #CEFFEB;
-  padding: 10px 20px 20px 20px; }
-  .add-comments form {
+.detail-articles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .detail-articles .container-article {
+    background-color: #ffffff; }
+    @media all and (min-width: 768px) {
+      .detail-articles .container-article {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap; } }
+  @media all and (min-width: 768px) and (min-width: 1024px) {
+    .detail-articles .container-article {
+      width: 1024px;
+      padding: 0 20px; } }
+    @media all and (min-width: 768px) {
+      .detail-articles .container-article .container-content {
+        order: 2;
+        padding-top: 40px; } }
+    .detail-articles .container-article .container-title {
+      order: 0;
+      display: flex;
+      flex-direction: column; }
+      .detail-articles .container-article .container-title .title-article {
+        font-family: "Roboto", sans-serif;
+        color: #3A3E3E;
+        font-size: 28px;
+        padding: 20px 10px;
+        margin: 0; }
+      @media all and (min-width: 1024px) {
+        .detail-articles .container-article .container-title {
+          padding-bottom: 10px; } }
+      .detail-articles .container-article .container-title .img-article {
+        order: 1;
+        max-width: 100%; }
+        @media all and (min-width: 768px) {
+          .detail-articles .container-article .container-title .img-article {
+            padding: 40px 10px;
+            height: 442px; } }
+        @media all and (min-width: 1024px) {
+          .detail-articles .container-article .container-title .img-article {
+            height: 575px; } }
+    .detail-articles .container-article .container-content-details {
+      order: 2;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: auto;
+      padding: 10px 10px 10px 10px; }
+      .detail-articles .container-article .container-content-details .photo-author-article {
+        align-self: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 100%; }
+      .detail-articles .container-article .container-content-details .name-author-article {
+        color: #808080;
+        align-self: center;
+        padding-left: 10px;
+        font-size: 16px; }
+      .detail-articles .container-article .container-content-details .date-article {
+        align-self: center;
+        font-size: 13px; }
+      .detail-articles .container-article .container-content-details .icons {
+        margin-left: auto;
+        align-self: center; }
+      .detail-articles .container-article .container-content-details .text {
+        color: #808080;
+        margin-bottom: 10px;
+        text-align: left; }
+        @media all and (min-width: 1024px) {
+          .detail-articles .container-article .container-content-details .text {
+            padding-top: 10px; } }
+      .detail-articles .container-article .container-content-details .date {
+        margin-left: auto;
+        color: #808080;
+        font-size: 13px; }
+      .detail-articles .container-article .container-content-details .buttons-icons-social {
+        margin: 2px;
+        border-radius: 5px;
+        padding: 6px 9px 3px 8px;
+        border: 1px solid #0EEBAC;
+        background-color: #ffffff;
+        color: #0EEBAC;
+        cursor: pointer; }
+        .detail-articles .container-article .container-content-details .buttons-icons-social .comments-number {
+          margin-left: 3px;
+          font-size: 16px; }
+  .detail-articles .container-buttons-pag {
+    width: 100%;
     display: flex;
-    flex-direction: column; }
-    .add-comments form input, .add-comments form button, .add-comments form textarea {
-      transition: background-color 0.25s;
-      border: 1px solid #0EEBAC;
-      margin: 5px 0 15px 0px;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 3px; }
-      .add-comments form input:focus, .add-comments form button:focus, .add-comments form textarea:focus {
-        outline-color: #0EEBAC;
-        background-color: #f2f2f2; }
-    .add-comments form button {
-      background-color: #0EEBAC;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: #3A3E3E; }
-      .add-comments form button:hover {
-        background-color: #39f3be; }
-      .add-comments form button:active {
-        background-color: #0bbb89; }
+    background-color: #ffffff;
+    padding: 30px 20px 30px 20px; }
+    @media all and (min-width: 1024px) {
+      .detail-articles .container-buttons-pag {
+        width: 1024px;
+        justify-content: flex-end; } }
+    .detail-articles .container-buttons-pag .button-previous-pag {
+      order: 0; }
+      .detail-articles .container-buttons-pag .button-previous-pag:hover {
+        cursor: pointer; }
+    .detail-articles .container-buttons-pag .button-next-pag {
+      order: 1;
+      cursor: pointer;
+      margin-left: auto; }
+      .detail-articles .container-buttons-pag .button-next-pag:hover {
+        cursor: pointer; }

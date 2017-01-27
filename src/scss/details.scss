@@ -1,5 +1,5 @@
 //style
-.list-articles{
+.detail-articles{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -8,46 +8,47 @@
     background-color: $color-white;
     @include if-is-medium-screen{
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       flex-wrap: nowrap;
       @include if-is-large-screen{
         width: 1024px;
-        padding:0 20px 0 20px;
-      }
-    }
-    .img-article{
-      max-width: 100%;
-      padding: 80px 0;
-      @include if-is-medium-screen{
-        padding-right: 10px;
-        width: 50%;
-        height: 250px;
-        padding-left: 10px;
-      }
-      @include if-is-large-screen{
-        max-width: 400px;
-        height: 250px;
+        padding: 0 20px;
       }
     }
     .container-content{
       @include if-is-medium-screen{
-        padding-top: 80px;
+        order: 2;
+        padding-top: 40px;
       }
     }
     .container-title{
+      order: 0;
       display:flex;
+      flex-direction: column;
       .title-article{
         font-family: $titles-font-family;
         color: $color-title-articles;
         font-size: $font-size-h2;
-        padding: 0px 10px 0px 10px;
+        padding: 20px 10px;
         margin:0;
       }
       @include if-is-large-screen{
         padding-bottom: 10px;
       }
+      .img-article{
+        order: 1;
+        max-width: 100%;
+        @include if-is-medium-screen{
+          padding: 40px 10px;
+          height: 442px;
+        }
+        @include if-is-large-screen{
+         height: 575px;
+        }
+      }
     }
     .container-content-details{
+      order:2;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;

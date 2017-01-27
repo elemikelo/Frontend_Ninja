@@ -33,3 +33,9 @@
     @content;
   }
 }
+
+@mixin if-is-medium-max-screen{
+  @media all and (max-width: 800px){
+    @content;
+  }
+}

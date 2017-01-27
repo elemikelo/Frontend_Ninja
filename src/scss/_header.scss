@@ -12,6 +12,7 @@ $header-title-font: $titles-font-family;
     width: 100%;
     max-width: 1064px;
     display: flex;
+    flex-wrap: wrap;
     margin: auto;
     .title{
       color: $header-text-color;
@@ -23,16 +24,16 @@ $header-title-font: $titles-font-family;
       text-shadow: 2px 2px 0px darken($header-background-color, 20%);
 
     }
-    .prueba{
+    .container-category{
       margin-left: auto;
       #btn-menu{
         display: none;
         &:checked ~ .menu{
-          @media (max-width: 800px){
+           @include if-is-medium-max-screen{
             display: block;}
             }
         &:checked ~ ul{
-          @media (max-width: 800px){
+          @include if-is-medium-max-screen{
             border: 1px solid $color-elven-song}
             }
 
@@ -47,12 +48,12 @@ $header-title-font: $titles-font-family;
           background-color: $color-elven-song;
           cursor: pointer;
         }
-        @media (max-width: 800px){
+        @include if-is-medium-max-screen{
           display: block;
           }
       }
       .menu{
-        @media (max-width: 800px){
+        @include if-is-medium-max-screen{
           display: none;
           position: absolute;
           right: 0;
@@ -67,11 +68,11 @@ $header-title-font: $titles-font-family;
           padding: 0;
           display: flex;
 
-          @media (max-width: 800px){
+          @include if-is-medium-max-screen{
               flex-direction: column;
             }
-          li{
 
+          li{
            .name-category{
              box-sizing: border-box;
              display: block;
