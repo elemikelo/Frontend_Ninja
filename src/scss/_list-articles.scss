@@ -1,129 +1,148 @@
-//style
-.list-articles{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  .container-article{
-    background-color: $color-white;
-    @include if-is-medium-screen{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      @include if-is-large-screen{
-        width: 1024px;
-        padding:0 20px 0 20px;
-      }
-    }
-    .img-article{
-      max-width: 100%;
-      padding: 80px 0;
-      @include if-is-medium-screen{
-        padding-right: 10px;
-        width: 50%;
-        height: 250px;
-        padding-left: 10px;
-      }
-      @include if-is-large-screen{
-        max-width: 400px;
-        height: 250px;
-      }
-    }
-    .container-content{
-      @include if-is-medium-screen{
-        padding-top: 80px;
-      }
-    }
-    .container-title{
-      display:flex;
-      .title-article{
-        font-family: $titles-font-family;
-        color: $color-title-articles;
-        font-size: $font-size-h2;
-        padding: 0px 10px 0px 10px;
-        margin:0;
-      }
-      @include if-is-large-screen{
-        padding-bottom: 10px;
-      }
-    }
-    .container-content-details{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      height: auto;
-      padding: 10px 10px 10px 10px;
-      .photo-author-article{
-        align-self: center;
-        width: 32px;
-        height: 32px;
-        border-radius: 100%;
-      }
-      .name-author-article{
-        color: $color-grey;
-        align-self: center;
-        padding-left: 10px;
-        font-size: $font-size-base;
-      }
-      .date-article{
-        align-self: center;
-        font-size: $font-size-small;
-      }
-      .icons{
-        margin-left: auto;
-        align-self: center;
-      }
-      .text{
-        color: $color-grey;
-        margin-bottom: 10px;
-        text-align: left;
-        @include if-is-large-screen{
-          padding-top: 10px;
-        }
-      }
-      .date{
-        margin-left: auto;
-        color: $color-grey;
-        font-size: $font-size-small;
-      }
-      .buttons-icons-social{
-        margin: 2px;
-        border-radius: 5px;
-        padding: 6px 9px 3px 8px;
-        border: 1px solid $color-primary;
-      	background-color: $color-white;
-        color: $color-primary;
-      	cursor:pointer;
-        .comments-number{
-          margin-left: 3px;
-          font-size: $font-size-base;
-        }
-      }
-    }
-  }
-    .container-buttons-pag{
-      width: 100%;
-      display: flex;
-      background-color: $color-white;
-      padding: 30px 20px 30px 20px;
-      @include if-is-large-screen{
-        width: 1024px;
-        justify-content: flex-end;
-      }
+.list-articles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 
-      .button-previous-pag{
-        order:0;
-        &:hover{
-          cursor:pointer;
+    .container-article {
+        background-color: $color-white;
+        padding-top: 30px; 
+        @include if-is-medium-screen {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            padding-top: 20px;
+            @include if-is-large-screen {
+                width: 1024px;
+                padding: 20px 20px 0 20px;
+            }
         }
-      }
-      .button-next-pag{
-        order:1;
-        cursor:pointer;
-        margin-left: auto;
-        &:hover{
-          cursor:pointer;
+
+        .img-article {
+            max-width: 100%;
+            padding: 80px 0 40px 0;
+            @include if-is-medium-screen {
+                padding-right: 10px;
+                width: 50%;
+                height: 250px;
+                padding-left: 10px;
+            }
+            @include if-is-large-screen {
+                max-width: 400px;
+                height: 250px;
+            }
         }
-      }
+
+        .container-content {
+            @include if-is-medium-screen {
+                padding-top: 80px;
+            }
+        }
+
+        .container-title {
+            display: flex;
+
+            .title-article {
+                font-family: $titles-font-family;
+                color: $color-title-articles;
+                font-size: $font-size-h2;
+                padding: 0 10px;
+                margin: 0;
+            }
+            @include if-is-large-screen {
+                padding-bottom: 10px;
+            }
+        }
+
+        .container-content-details {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: auto;
+            padding: 10px;
+
+            .photo-author-article {
+                align-self: center;
+                width: 32px;
+                height: 32px;
+                border-radius: 100%;
+            }
+
+            .name-author-article {
+                color: $color-grey;
+                align-self: center;
+                padding-left: 10px;
+                font-size: $font-size-base;
+            }
+
+            .date-article {
+                align-self: center;
+                font-size: $font-size-small;
+            }
+
+            .icons {
+                margin-left: auto;
+                align-self: center;
+            }
+
+            .text {
+                color: $color-grey;
+                margin-bottom: 10px;
+                text-align: left;
+                @include if-is-large-screen {
+                    padding-top: 10px;
+                }
+            }
+
+            .date {
+                margin-left: auto;
+                color: $color-grey;
+                font-size: $font-size-small;
+            }
+
+            .buttons-icons-social {
+                margin: 2px;
+                border-radius: 5px;
+                padding: 6px 9px 3px 8px;
+                border: 1px solid $color-primary;
+                background-color: $color-white;
+                color: $color-primary;
+                cursor: pointer;
+
+                .comments-number {
+                    margin-left: 3px;
+                    font-size: $font-size-base;
+                }
+            }
+        }
+    }
+
+    .container-buttons-pag {
+        width: 100%;
+        display: flex;
+        background-color: $color-white;
+        padding: 30px 20px;
+        @include if-is-large-screen {
+            width: 1024px;
+            justify-content: flex-end;
+        }
+
+        .button-previous-pag {
+            order: 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .button-next-pag {
+            order: 1;
+            cursor: pointer;
+            margin-left: auto;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 }

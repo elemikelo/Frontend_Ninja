@@ -5,17 +5,30 @@
     @include if-is-large-screen {
         margin: auto;
     }
+    @include if-is-large-screen {
+        margin: auto;
+        width: 1064px;
+    }
 
-    h2 {
+    .title-add-comments, .title-comments {
+        font-size: $font-size-large;
         color: $color-grey;
-        padding: 0 10px;
+        padding: 20px 10px;
+        @include if-is-large-screen {
+            padding: 20px 30px 10px 30px;
+        }
     }
 
     .list-comments {
         @include if-is-large-screen {
             margin: auto;
+            width: 100%;
+        }
+        @include if-is-large-screen {
             width: 1064px;
         }
+
+
 
         ul {
             padding: 0;
@@ -24,6 +37,9 @@
         li {
             list-style: none;
             padding: 20px 10px;
+            @include if-is-large-screen {
+                padding: 10px 30px 20px 30px;
+            }
         }
     }
 
@@ -35,7 +51,7 @@
         padding-bottom: 20px;
         @include if-is-large-screen {
             margin: auto;
-            width: 1064px;
+            width: 100%;
         }
 
         form {
@@ -77,12 +93,19 @@
                 @include if-is-medium-screen {
                     width: 300px;
                 }
+                @include if-is-large-screen {
+                    width: 400px;
+                }
             }
 
             textarea {
                 @extend input;
                 @include if-is-medium-screen {
                     height: 75px;
+                }
+                @include if-is-large-screen {
+                    height: 100px;
+                    width: 400px;
                 }
             }
 

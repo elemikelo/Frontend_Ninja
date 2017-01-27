@@ -37,6 +37,7 @@ $color-title-articles: $color-grey-dark;
 $large-screen-width: 1024px; // iPad en landscape o superior
 $medium-screen-width: 768px; // iPad portrait
 $small-screen-width: $medium-screen-width - 1; // smartphones
+$desktop-screen-width: $large-screen-width + 1;
 
 //other
 $border-standard: 5px;

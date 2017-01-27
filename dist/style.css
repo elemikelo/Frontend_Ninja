@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300|Fredoka+One");
-.clearfix:before, .clearfix:after {
+.clearfix:after, .clearfix:before {
   content: " ";
   display: table; }
 
@@ -7,6 +7,9 @@
   clear: both; }
 
 .header {
+  position: fixed;
+  z-index: 1000;
+  box-shadow: 0px 6px 5px -1px rgba(0, 0, 0, 0.18);
   background: #0EEBAC;
   width: 100%; }
   .header .container-header {
@@ -23,7 +26,7 @@
       font-size: 30px;
       align-self: center;
       margin: 0;
-      text-shadow: 2px 2px 0px #088b66; }
+      text-shadow: 2px 2px 0 #088b66; }
     .header .container-header .container-category {
       margin-left: auto; }
       .header .container-header .container-category #btn-menu {
@@ -66,7 +69,7 @@
           box-sizing: border-box;
           display: block;
           color: #ffffff;
-          text-shadow: 1px 1px 0px #055b42;
+          text-shadow: 1px 1px 0 #055b42;
           padding: 20px; }
           .header .container-header .container-category .menu ul li .name-category .icono-user {
             position: relative;
@@ -83,7 +86,7 @@
           border: none; }
           .header .container-header .container-category .menu ul li .input-search:focus {
             outline: none;
-            box-shadow: 0px 0px 1px 1px #3A3E3E; }
+            box-shadow: 0 0 1px 1px #3A3E3E; }
 
 body {
   background: #F3EFEF;
@@ -94,6 +97,9 @@ body {
   padding: 0px; }
   body a:link {
     text-decoration: none; }
+
+strong {
+  color: #1abc9c; }
 
 footer {
   display: flex;
@@ -124,19 +130,21 @@ footer {
   flex-wrap: wrap;
   justify-content: center; }
   .list-articles .container-article {
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    padding-top: 30px; }
     @media all and (min-width: 768px) {
       .list-articles .container-article {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap; } }
+        flex-wrap: nowrap;
+        padding-top: 20px; } }
   @media all and (min-width: 768px) and (min-width: 1024px) {
     .list-articles .container-article {
       width: 1024px;
-      padding: 0 20px 0 20px; } }
+      padding: 20px 20px 0 20px; } }
     .list-articles .container-article .img-article {
       max-width: 100%;
-      padding: 80px 0; }
+      padding: 80px 0 40px 0; }
       @media all and (min-width: 768px) {
         .list-articles .container-article .img-article {
           padding-right: 10px;
@@ -156,7 +164,7 @@ footer {
         font-family: "Roboto", sans-serif;
         color: #3A3E3E;
         font-size: 28px;
-        padding: 0px 10px 0px 10px;
+        padding: 0 10px;
         margin: 0; }
       @media all and (min-width: 1024px) {
         .list-articles .container-article .container-title {
@@ -166,7 +174,7 @@ footer {
       flex-direction: row;
       flex-wrap: wrap;
       height: auto;
-      padding: 10px 10px 10px 10px; }
+      padding: 10px; }
       .list-articles .container-article .container-content-details .photo-author-article {
         align-self: center;
         width: 32px;
@@ -209,7 +217,7 @@ footer {
     width: 100%;
     display: flex;
     background-color: #ffffff;
-    padding: 30px 20px 30px 20px; }
+    padding: 30px 20px; }
     @media all and (min-width: 1024px) {
       .list-articles .container-buttons-pag {
         width: 1024px;
@@ -232,18 +240,32 @@ footer {
   @media all and (min-width: 1024px) {
     .comments {
       margin: auto; } }
-  .comments h2 {
+  @media all and (min-width: 1024px) {
+    .comments {
+      margin: auto;
+      width: 1064px; } }
+  .comments .title-add-comments, .comments .title-comments {
+    font-size: 22px;
     color: #808080;
-    padding: 0 10px; }
+    padding: 20px 10px; }
+    @media all and (min-width: 1024px) {
+      .comments .title-add-comments, .comments .title-comments {
+        padding: 20px 30px 10px 30px; } }
   @media all and (min-width: 1024px) {
     .comments .list-comments {
       margin: auto;
+      width: 100%; } }
+  @media all and (min-width: 1024px) {
+    .comments .list-comments {
       width: 1064px; } }
   .comments .list-comments ul {
     padding: 0; }
   .comments .list-comments li {
     list-style: none;
     padding: 20px 10px; }
+    @media all and (min-width: 1024px) {
+      .comments .list-comments li {
+        padding: 10px 30px 20px 30px; } }
   .comments .add-comments {
     display: flex;
     justify-content: center;
@@ -253,7 +275,7 @@ footer {
     @media all and (min-width: 1024px) {
       .comments .add-comments {
         margin: auto;
-        width: 1064px; } }
+        width: 100%; } }
     .comments .add-comments form {
       display: flex;
       flex-direction: column;
@@ -286,9 +308,16 @@ footer {
         @media all and (min-width: 768px) {
           .comments .add-comments form input, .comments .add-comments form textarea, .comments .add-comments form button {
             width: 300px; } }
+        @media all and (min-width: 1024px) {
+          .comments .add-comments form input, .comments .add-comments form textarea, .comments .add-comments form button {
+            width: 400px; } }
       @media all and (min-width: 768px) {
         .comments .add-comments form textarea {
           height: 75px; } }
+      @media all and (min-width: 1024px) {
+        .comments .add-comments form textarea {
+          height: 100px;
+          width: 400px; } }
       .comments .add-comments form button {
         background-color: #0EEBAC;
         font-weight: bold;
@@ -308,16 +337,18 @@ footer {
   flex-wrap: wrap;
   justify-content: center; }
   .detail-articles .container-article {
+    padding-bottom: 40px;
     background-color: #ffffff; }
     @media all and (min-width: 768px) {
       .detail-articles .container-article {
+        padding-top: 40px;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap; } }
   @media all and (min-width: 768px) and (min-width: 1024px) {
     .detail-articles .container-article {
       width: 1024px;
-      padding: 0 20px; } }
+      padding: 40px 20px; } }
     @media all and (min-width: 768px) {
       .detail-articles .container-article .container-content {
         order: 2;
@@ -330,8 +361,11 @@ footer {
         font-family: "Roboto", sans-serif;
         color: #3A3E3E;
         font-size: 28px;
-        padding: 20px 10px;
+        padding: 100px 10px 40px 10px;
         margin: 0; }
+        @media all and (min-width: 768px) {
+          .detail-articles .container-article .container-title .title-article {
+            padding: 30px 10px 20px 10px; } }
       @media all and (min-width: 1024px) {
         .detail-articles .container-article .container-title {
           padding-bottom: 10px; } }
@@ -351,7 +385,7 @@ footer {
       flex-direction: row;
       flex-wrap: wrap;
       height: auto;
-      padding: 10px 10px 10px 10px; }
+      padding: 10px; }
       .detail-articles .container-article .container-content-details .photo-author-article {
         align-self: center;
         width: 32px;
@@ -394,7 +428,7 @@ footer {
     width: 100%;
     display: flex;
     background-color: #ffffff;
-    padding: 30px 20px 30px 20px; }
+    padding: 30px 20px; }
     @media all and (min-width: 1024px) {
       .detail-articles .container-buttons-pag {
         width: 1024px;

@@ -2,104 +2,121 @@
 $header-background-color: $color-primary;
 $header-text-color: $color-white;
 $header-title-font: $titles-font-family;
-
 //style
-.header{
-  background: $header-background-color;
-  width: 100%;
-  .container-header{
+.header {
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0px 6px 5px -1px rgba(0,0,0,0.18);
     background: $header-background-color;
     width: 100%;
-    max-width: 1064px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    .title{
-      color: $header-text-color;
-      font-family: $title-web-pag;
-      padding-left: 15px;
-      font-size: 30px;
-      align-self: center;
-      margin: 0;
-      text-shadow: 2px 2px 0px darken($header-background-color, 20%);
 
-    }
-    .container-category{
-      margin-left: auto;
-      #btn-menu{
-        display: none;
-        &:checked ~ .menu{
-           @include if-is-medium-max-screen{
-            display: block;}
-            }
-        &:checked ~ ul{
-          @include if-is-medium-max-screen{
-            border: 1px solid $color-elven-song}
-            }
+    .container-header {
+        background: $header-background-color;
+        width: 100%;
+        max-width: 1064px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
 
-          }
-      label{
-        display: none;
-        width: 30px;
-        height: 30px;
-        padding: 1em;
-        border-radius: 5px;
-        &:hover{
-          background-color: $color-elven-song;
-          cursor: pointer;
+        .title {
+            color: $header-text-color;
+            font-family: $title-web-pag;
+            padding-left: 15px;
+            font-size: 30px;
+            align-self: center;
+            margin: 0;
+            text-shadow: 2px 2px 0 darken($header-background-color, 20%);
         }
-        @include if-is-medium-max-screen{
-          display: block;
-          }
-      }
-      .menu{
-        @include if-is-medium-max-screen{
-          display: none;
-          position: absolute;
-          right: 0;
-          width: auto;
-          text-align: center;
-          background: $header-background-color;
-          }
 
-        ul{
-          margin: 0;
-          list-style: none;
-          padding: 0;
-          display: flex;
+        .container-category {
+            margin-left: auto;
 
-          @include if-is-medium-max-screen{
-              flex-direction: column;
+            #btn-menu {
+                display: none;
+
+                &:checked ~ .menu {
+                    @include if-is-medium-max-screen {
+                        display: block;
+                    }
+                }
+
+                &:checked ~ ul {
+                    @include if-is-medium-max-screen {
+                        border: 1px solid $color-elven-song;
+                    }
+                }
             }
 
-          li{
-           .name-category{
-             box-sizing: border-box;
-             display: block;
-             color: $color-white;
-             text-shadow: 1px 1px 0px darken($header-background-color, 30%);
-             padding: 20px;
-             .icono-user{
-               position: relative;
-               top: 2px;
-               padding-right: 5px;
-             }
-             &:hover{background-color: $color-elven-song; }
+            label {
+                display: none;
+                width: 30px;
+                height: 30px;
+                padding: 1em;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: $color-elven-song;
+                    cursor: pointer;
+                }
+                @include if-is-medium-max-screen {
+                    display: block;
+                }
             }
-            .input-search{
-              width: 100px;
-              height: 25px;
-              margin: 17px;
-              font-size: $font-size-small;
-              border-radius: 5px;
-              border: none;
-              &:focus{
-                outline: none;
-                box-shadow: 0px 0px 1px 1px $color-grey-dark;}
+
+            .menu {
+                @include if-is-medium-max-screen {
+                    display: none;
+                    position: absolute;
+                    right: 0;
+                    width: auto;
+                    text-align: center;
+                    background: $header-background-color;
+                }
+
+                ul {
+                    margin: 0;
+                    list-style: none;
+                    padding: 0;
+                    display: flex;
+                    @include if-is-medium-max-screen {
+                        flex-direction: column;
+                    }
+
+                    li {
+                        .name-category {
+                            box-sizing: border-box;
+                            display: block;
+                            color: $color-white;
+                            text-shadow: 1px 1px 0 darken($header-background-color, 30%);
+                            padding: 20px;
+
+                            .icono-user {
+                                position: relative;
+                                top: 2px;
+                                padding-right: 5px;
+                            }
+
+                            &:hover {
+                                background-color: $color-elven-song;
+                            }
+                        }
+
+                        .input-search {
+                            width: 100px;
+                            height: 25px;
+                            margin: 17px;
+                            font-size: $font-size-small;
+                            border-radius: 5px;
+                            border: none;
+
+                            &:focus {
+                                outline: none;
+                                box-shadow: 0 0 1px 1px $color-grey-dark;
+                            }
+                        }
+                    }
+                }
             }
-          }
         }
-      }
     }
-  }
 }

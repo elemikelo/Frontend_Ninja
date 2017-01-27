@@ -1,29 +1,31 @@
-//variables
-
 //style
-footer{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-size: $font-size-small;
-  width: 100%;
-  background: $color-elven-song;
-  height: 65px;
-  .text-footer{
-    padding: 5px;
-  }
-  .button-go-to-up{
-    padding: 8px;
-    background: $color-grey;
-    color: $color-elven-iris;
-    text-decoration: none;
-    border: 1px solid $color-elven-iris;
-    border-radius: 5px;
-    box-shadow: 2px;
-    cursor: pointer;
-    &:hover{
-      background: $color-grey-light;
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: $font-size-small;
+    width: 100%;
+    background: $color-elven-song;
+    height: 65px;
+
+    .text-footer {
+        padding: 5px;
     }
-  }
+
+    .button-go-to-up {
+        padding: 8px;
+        background: $color-grey;
+        color: $color-elven-iris;
+        text-decoration: none;
+        border: 1px solid $color-elven-iris;
+        border-radius: 5px;
+        box-shadow: 2px;
+        cursor: pointer;
+
+        &:hover {
+            background: $color-grey-light;
+        }
+    }
 }
