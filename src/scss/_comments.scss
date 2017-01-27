@@ -1,91 +1,109 @@
-//style
-
-.comments{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  @include if-is-medium-screen{
-
-  }
-  @include if-is-large-screen{
-
-  }
-  h2{
-    color: $color-grey;
-    padding: 0 10px;
-    @include if-is-medium-screen{
-
-    }
-    @include if-is-large-screen{
-
-    }
-  }
-
-  .list-comments{
-
-    @include if-is-medium-screen{
-
-      }
-      @include if-is-large-screen{
-        margin: auto;
-        width: 1024px;
-        }
-
-    ul{
-      padding: 0;
-    }
-    li{
-      list-style: none;
-      padding: 0 10px;
-    }
-  }
-  .add-comments{
-    background-color: $color-elven;
-    @include if-is-medium-screen{
-
-    }
-    @include if-is-large-screen{
-      margin: auto;
-      width: 1024px;
-      padding: 0 20px;
-    }
-
-  form{
+.comments {
     display: flex;
     flex-direction: column;
-    padding: 0 10px;
-    @include if-is-medium-screen{
-
-    }
-    @include if-is-large-screen{
-
+    justify-content: center;
+    @include if-is-large-screen {
+        margin: auto;
     }
 
-    input, textarea {
-        transition: background-color 0.25s;
-        border: 1px solid $color-primary;
-        margin: 5px 0 15px 0px;
-        padding: 10px;
-        font-size: $font-size-base;
-        border-radius: 3px;
-        &:focus {
-            outline-color: $color-primary;
-            background-color: darken(white, 5%);
+    h2 {
+        color: $color-grey;
+        padding: 0 10px;
+    }
+
+    .list-comments {
+        @include if-is-large-screen {
+            margin: auto;
+            width: 1064px;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            padding: 20px 10px;
         }
     }
-    button {
-        @extend input;
-        background-color: $color-primary;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: $main-text-color;
-        &:hover {
-            background-color: lighten($color-primary, 10%);
+
+    .add-comments {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: $color-elven;
+        padding-bottom: 20px;
+        @include if-is-large-screen {
+            margin: auto;
+            width: 1064px;
         }
-        &:active {
-            background-color: darken($color-primary, 10%);
+
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 0 10px;
+            @include if-is-medium-screen {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: flex-start;
+            }
+
+            .item-1 {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .item-2 {
+                display: flex;
+                flex-direction: column;
+                @include if-is-medium-screen {
+                    align-items: center;
+                }
+            }
+
+            input {
+                transition: background-color 0.25s;
+                border: 1px solid $color-primary;
+                margin: 5px 0 15px;
+                padding: 10px;
+                font-size: $font-size-base;
+                border-radius: 3px;
+
+                &:focus {
+                    outline-color: $color-primary;
+                    background-color: darken(white, 5%);
+                }
+                @include if-is-medium-screen {
+                    width: 300px;
+                }
+            }
+
+            textarea {
+                @extend input;
+                @include if-is-medium-screen {
+                    height: 75px;
+                }
+            }
+
+            button {
+                @extend input;
+                background-color: $color-primary;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: $main-text-color;
+
+                &:hover {
+                    background-color: lighten($color-primary, 10%);
+                }
+
+                &:active {
+                    background-color: darken($color-primary, 10%);
+                }
+                @include if-is-medium-screen {
+                    width: 150px;
+                }
+            }
         }
-      }
     }
-  }
 }

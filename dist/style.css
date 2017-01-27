@@ -75,7 +75,6 @@
           .header .container-header .container-category .menu ul li .name-category:hover {
             background-color: #1abc9c; }
         .header .container-header .container-category .menu ul li .input-search {
-          text-align: center;
           width: 100px;
           height: 25px;
           margin: 17px;
@@ -230,39 +229,66 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  @media all and (min-width: 1024px) {
+    .comments {
+      margin: auto; } }
   .comments h2 {
     color: #808080;
     padding: 0 10px; }
   @media all and (min-width: 1024px) {
     .comments .list-comments {
       margin: auto;
-      width: 1024px; } }
+      width: 1064px; } }
   .comments .list-comments ul {
     padding: 0; }
   .comments .list-comments li {
     list-style: none;
-    padding: 0 10px; }
+    padding: 20px 10px; }
   .comments .add-comments {
-    background-color: #CEFFEB; }
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #CEFFEB;
+    padding-bottom: 20px; }
     @media all and (min-width: 1024px) {
       .comments .add-comments {
         margin: auto;
-        width: 1024px;
-        padding: 0 20px; } }
+        width: 1064px; } }
     .comments .add-comments form {
       display: flex;
       flex-direction: column;
       padding: 0 10px; }
-      .comments .add-comments form input, .comments .add-comments form button, .comments .add-comments form textarea {
+      @media all and (min-width: 768px) {
+        .comments .add-comments form {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          align-items: flex-start; } }
+      .comments .add-comments form .item-1 {
+        display: flex;
+        flex-direction: column; }
+      .comments .add-comments form .item-2 {
+        display: flex;
+        flex-direction: column; }
+        @media all and (min-width: 768px) {
+          .comments .add-comments form .item-2 {
+            align-items: center; } }
+      .comments .add-comments form input, .comments .add-comments form textarea, .comments .add-comments form button {
         transition: background-color 0.25s;
         border: 1px solid #0EEBAC;
-        margin: 5px 0 15px 0px;
+        margin: 5px 0 15px;
         padding: 10px;
         font-size: 16px;
         border-radius: 3px; }
-        .comments .add-comments form input:focus, .comments .add-comments form button:focus, .comments .add-comments form textarea:focus {
+        .comments .add-comments form input:focus, .comments .add-comments form textarea:focus, .comments .add-comments form button:focus {
           outline-color: #0EEBAC;
           background-color: #f2f2f2; }
+        @media all and (min-width: 768px) {
+          .comments .add-comments form input, .comments .add-comments form textarea, .comments .add-comments form button {
+            width: 300px; } }
+      @media all and (min-width: 768px) {
+        .comments .add-comments form textarea {
+          height: 75px; } }
       .comments .add-comments form button {
         background-color: #0EEBAC;
         font-weight: bold;
@@ -272,6 +298,9 @@ footer {
           background-color: #39f3be; }
         .comments .add-comments form button:active {
           background-color: #0bbb89; }
+        @media all and (min-width: 768px) {
+          .comments .add-comments form button {
+            width: 150px; } }
 
 .detail-articles {
   display: flex;
