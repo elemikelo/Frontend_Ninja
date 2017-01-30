@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="/dist/style.css">
-    <title></title>
+    <title>Details</title>
   </head>
   <body>
     <header class="header" id="header">
@@ -27,9 +27,7 @@
         </div>
       </div>
     </header>
-
       <main class="container-main">
-
         <section class="detail-articles" id="inicio">
             <article class="container-article" id="article-cine">
               <div class="container-content">
@@ -55,15 +53,15 @@
           </section>
 
           <section class="comments">
-            <div class="list-comments">
+            <div class="comments-container">
               <div class="title-comments">Comments</div>
-              <ul>
-                <li>Luismi: Es un ejemplo para ver como queda</li>
+              <ul class="comments-list">
+                
               </ul>
             </div>
             <div class="add-comments">
               <div class="title-add-comments">Add your comment</div>
-              <form type="hidden" class"form" novalidate>
+              <form class="new-comment-form" novalidate>
                 <div class="item-1">
                   <input type="text" name="name" id="name" class="name" placeholder="Name">
                   <input type="text" name="last-name" id="last_name" class="last-name" placeholder="Last Name">
@@ -71,11 +69,12 @@
                 </div>
                 <div class="item-2">
                   <textarea  name="comment" class="comment" id="comment" placeholder="Write your comment!"></textarea>
-                  <button class="button" id='sendNewComment'>Add Comment</button>
+                  <button>Add Comment</button>
                 </div>
               </form>
             </div>
           </section>
+        </main>
           <footer class="footer">
             <div class="text-footer">
               Copyright © 2017 Logo Inc.
@@ -83,4 +82,5 @@
            <a href="#inicio"><button type="button" class="button-go-to-up" title="Go to up">Go to up</button></a>
          </footer>
   </body>
+  <script src="dist/main.js"></script>
 </html>
