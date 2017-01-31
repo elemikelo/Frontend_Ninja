@@ -6,7 +6,7 @@
 
     .container-article {
         background-color: $color-white;
-        padding-top: 30px; 
+        padding-top: 30px;
         @include if-is-medium-screen {
             display: flex;
             flex-direction: row;
@@ -99,16 +99,20 @@
                 color: $color-grey;
                 font-size: $font-size-small;
             }
+            .btn-like{
+              margin: 2px;
+              border-radius: 5px;
+              padding: 6px 9px 3px 8px;
+              border: 1px solid $color-primary;
+              background-color: $color-white;
+              color: $color-primary;
+              cursor: pointer;
+              height: 33px;
+            }
 
-            .buttons-icons-social {
-                margin: 2px;
-                border-radius: 5px;
-                padding: 6px 9px 3px 8px;
-                border: 1px solid $color-primary;
-                background-color: $color-white;
-                color: $color-primary;
-                cursor: pointer;
-
+            .btn-comment {
+              @extend .btn-like;
+    
                 .comments-number {
                     margin-left: 3px;
                     font-size: $font-size-base;

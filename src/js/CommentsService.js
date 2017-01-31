@@ -7,7 +7,7 @@ module.exports = {
   list: function(successCallback, errorCallback) {
       $.ajax({
           url: API_URL,
-          type: "get",
+          type: "GET",
           success: function(data) {
               successCallback(data);
           },
@@ -23,7 +23,7 @@ module.exports = {
   delete: function(commentId, successCallback, errorCallback) {
       $.ajax({
           url: API_URL + commentId,
-          type: "delete", // eliminar el recurso de la URL en un API REST
+          type: "DELETE", // eliminar el recurso de la URL en un API REST
           success: function(data) {
               successCallback(data);
           },
@@ -39,7 +39,7 @@ module.exports = {
   save: function(comment, successCallback, errorCallback) {
       $.ajax({
           url: API_URL,
-          type: "post",
+          type: "POST",
           data: comment,
           success: function(data) {
               successCallback(data);

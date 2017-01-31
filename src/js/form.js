@@ -24,17 +24,18 @@ $('.new-comment-form').on('submit', function () {
 
     //bloqueo de boton
     $(this).find("button").text("Saving Comment...").attr("disabled", true);
-
+    var disableButton = $(this).find("button").text("Add Comment").attr("disabled", false);
+    var self = this;
+    
     // lo enviamos al backend
     CommentsService.save(comment, function(data) { // si se guarda bien
-        alert("Comentario enviado correctamente");
-        self.reset(); // resetea el formulario
-        $(self).find("button").text("Send Comment").attr("disabled", false);
+        disableButton;
         CommentsListManager.loadComments();
+        self.reset(); //reseteamos el formulario
     }, function(error) { // si no se guarda
         alert("Se ha producido un error");
-        $(self).find("button").text("Send comment").attr("disabled", false); // TODO: refactorizar esto
-    });
+        disableButton;
+    })
+    return false; // no queremos enviar el formulario nunca
 
-
-});
+  });

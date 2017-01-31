@@ -108,14 +108,19 @@
                 font-size: $font-size-small;
             }
 
-            .buttons-icons-social {
-                margin: 2px;
-                border-radius: 5px;
-                padding: 6px 9px 3px 8px;
-                border: 1px solid $color-primary;
-                background-color: $color-white;
-                color: $color-primary;
-                cursor: pointer;
+            .btn-like{
+              margin: 2px;
+              border-radius: 5px;
+              padding: 6px 9px 3px 8px;
+              border: 1px solid $color-primary;
+              background-color: $color-white;
+              color: $color-primary;
+              cursor: pointer;
+              height: 33px;
+            }
+
+            .btn-comment {
+              @extend .btn-like;
 
                 .comments-number {
                     margin-left: 3px;

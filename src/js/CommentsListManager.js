@@ -20,6 +20,10 @@ module.exports = {
     },
 
     loadComments: function() {
+
+        //Borramos todo antes de cargar
+        $(".comments-list").empty();
+
         var self = this;
 
         // mostrar el mensaje de cargando
@@ -29,6 +33,7 @@ module.exports = {
         CommentsService.list(function(comments){ // si nos devuelve comentarios
             if (comments.length == 0) {
                 self.setUiBlank(); // si no hay comentarios -> estado en blanco
+                $('.comments-number').html('').append(comments.length);
             } else {
                 // pintar los comentarios en el listado
                 self.renderComments(comments);
@@ -41,10 +46,12 @@ module.exports = {
 
     renderComments: function(comments) {
         var contentToAdd = '';
-        for (var i in comments) {
+        for (var i = 0; i < comments.length; i++) {
           contentToAdd += '<div id="name-comment">' + comments[i].name + '&nbsp' + comments[i].lastName + '</div>' + '<li id="new-comment">' + comments[i].comment + '<button class="delete-button" data-id="' + comments[i].id + '" title="delete">&times;</button></li>';
         }
+
         $(".comments-list").append(contentToAdd);
+        $('.comments-number').html('').append(comments.length);
     },
 
     deleteComment: function(commentId) {
