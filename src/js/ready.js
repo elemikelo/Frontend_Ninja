@@ -1,10 +1,6 @@
 var $ = require('jquery');
 var CommentsListManager = require('./CommentsListManager');
 
-// var likeService = require('./likeService');
-
-
-
 $(document).ready(function(){
 
   // cargar los comentarios
@@ -15,9 +11,5 @@ $(document).ready(function(){
       var commentId = $(this).data("id"); // recuperamos el id del comentario
       CommentsListManager.deleteComment(commentId)
     });
-
-
-  // webStorage likes
-
 
 });

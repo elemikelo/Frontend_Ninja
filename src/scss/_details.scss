@@ -100,12 +100,8 @@
                     background: url("../src/img/icons/icon-like.svg") no-repeat;
                     background-color: transparent;
                     background-position: center;
+                    transition: background-image 0.2s ease-in-out;
 
-                    &:hover {
-                        background: url("../src/img/icons/icon-like-click.svg") no-repeat;
-                        background-color: transparent;
-                        background-position: center;
-                    }
 
                     &:focus {
                         outline-color: $color-primary;
@@ -126,6 +122,7 @@
                     color: $color-primary;
                     cursor: pointer;
                     width: auto;
+
 
                     &:focus {
                         outline-color: $color-primary;
