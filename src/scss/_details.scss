@@ -36,12 +36,10 @@
                 font-family: $titles-font-family;
                 color: $color-title-articles;
                 font-size: $font-size-h2;
-                padding:100px 10px 40px 10px;
+                padding: 100px 10px 40px;
                 @include if-is-medium-screen {
-                    padding: 30px 10px 20px 10px;
-
+                    padding: 30px 10px 20px;
                 }
-
                 margin: 0;
             }
             @include if-is-large-screen {
@@ -82,68 +80,72 @@
                 padding-left: 10px;
                 font-size: $font-size-base;
             }
+
             .icons {
                 margin-left: auto;
                 align-self: center;
                 display: flex;
                 align-items: flex-start;
 
-            .btn-like{
-              margin: 2px;
-              border-radius: 5px;
-              padding: 6px 9px 3px 8px;
-              border: 1px solid $color-primary;
-              background-color: $color-white;
-              color: $color-primary;
-              cursor: pointer;
-              height: 33px;
-              width: 50px;
-              background: url("../src/img/icons/icon-like.svg") no-repeat;
-              background-color: transparent;
-              background-position: center;
+                .btn-like {
+                    margin: 2px;
+                    border-radius: 5px;
+                    padding: 6px 9px 3px 8px;
+                    border: 1px solid $color-primary;
+                    background-color: $color-white;
+                    color: $color-primary;
+                    cursor: pointer;
+                    height: 33px;
+                    width: 50px;
+                    background: url("../src/img/icons/icon-like.svg") no-repeat;
+                    background-color: transparent;
+                    background-position: center;
 
-              &:hover {
-                .icon-likes{
-                  display: none;
+                    &:hover {
+                        background: url("../src/img/icons/icon-like-click.svg") no-repeat;
+                        background-color: transparent;
+                        background-position: center;
+                    }
+
+                    &:focus {
+                        outline-color: $color-primary;
+                        background-color: darken(white, 5%);
+                    }
                 }
-                background: url("../src/img/icons/icon-like-click.svg") no-repeat;
-                background-color: transparent;
-                background-position: center;
-              }
-              &:active {
-                background: url("../src/img/icons/icon-like-click.svg") no-repeat;
-                background-color: transparent;
-                background-position: center;
-              }
 
+                .btn-comment {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin: 2px;
+                    border-radius: 5px;
+                    padding: 6px 9px 3px 8px;
+                    border: 1px solid $color-primary;
+                    background-color: $color-white;
+                    color: $color-primary;
+                    cursor: pointer;
+                    width: auto;
+
+                    &:focus {
+                        outline-color: $color-primary;
+                        background-color: darken(white, 5%);
+                    }
+
+                    .icon-comment {
+                        padding: 15px 9px 3px 8px;
+                        background: url("../src/img/icons/icon-comment.svg") no-repeat;
+                        background-color: transparent;
+                    }
+
+                    .comments-number {
+                        margin-left: 3px;
+                        font-size: $font-size-base;
+                    }
+                }
             }
-            .btn-comment {
-              display: flex;
-              flex-direction: row;
-              justify-content: space-around;
-              align-items: center;
-              margin: 2px;
-              border-radius: 5px;
-              padding: 6px 9px 3px 8px;
-              border: 1px solid $color-primary;
-              background-color: $color-white;
-              color: $color-primary;
-              cursor: pointer;
-              width: auto;
 
-                .icon-comment{
-                padding: 15px 9px 3px 8px;
-                background: url("../src/img/icons/icon-comment.svg") no-repeat;
-                background-color: transparent;
-                }
-                .comments-number {
-                    margin-left: 3px;
-                    font-size: $font-size-base;
-                }
-             }
-          }
-
-              .date {
+            .date {
                 margin-left: auto;
                 color: $color-grey;
                 font-size: $font-size-small;
@@ -168,6 +170,7 @@
                 cursor: pointer;
             }
         }
+
         .button-next-pag {
             order: 1;
             cursor: pointer;
