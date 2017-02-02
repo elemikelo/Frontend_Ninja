@@ -4,18 +4,25 @@
     justify-content: center;
     @include if-is-large-screen {
         margin: auto;
+        width: 1024px;
     }
-    @include if-is-large-screen {
+    @include if-is-desktop-screen {
         margin: auto;
         width: 1064px;
     }
 
-    .title-add-comments, .title-comments {
+    .comments-list {
+        padding: 0;
+        margin: 20px 10px;
+    }
+
+    .title-add-comments,
+    .title-comments {
         font-size: $font-size-large;
         color: $color-grey;
-        padding: 20px 10px;
+        padding: 20px 10px 0;
         @include if-is-large-screen {
-            padding: 20px 30px 10px 30px;
+            padding: 20px 30px 10px;
         }
     }
 
@@ -28,18 +35,43 @@
             width: 1064px;
         }
 
-
-
-        ul {
-            padding: 0;
-        }
-
         li {
             list-style: none;
             padding: 20px 10px;
             @include if-is-large-screen {
-                padding: 10px 30px 20px 30px;
+                padding: 10px 30px 20px;
             }
+        }
+    }
+
+    #name-comment {
+        padding: 20px 0;
+        color: $color-elven-song;
+        font-size: $font-size-base+3;
+        @include if-is-large-screen {
+            padding-left: 20px;
+        }
+    }
+
+    #new-comment {
+        width: auto;
+        padding: 10px;
+        display: flex;
+        border-radius: 20px;
+        list-style: none;
+        background-color: white;
+        border: 1px solid $color-grey;
+
+        .delete-button {
+            align-self: flex-start;
+            margin-left: auto;
+            border-radius: 20px;
+            text-decoration: none;
+            border: none;
+            color: #3A3E3E;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.5s;
         }
     }
 
