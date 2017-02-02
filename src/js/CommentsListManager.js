@@ -4,25 +4,25 @@ var CommentsService = require('./CommentsService');
 module.exports = {
 
     setUiIdeal: function() {
-        $('.comments-list').removeClass().addClass('comments-list ideal');
+        $('.comments').removeClass().addClass('comments ideal');
     },
 
     setUiBlank: function() {
-        $('.comments-list').removeClass().addClass('comments-list blank');
+        $('.comments').removeClass().addClass('comments blank');
     },
 
     setUiError: function() {
-        $('.comments-list').removeClass().addClass('comments-list error');
+        $('.comments').removeClass().addClass('comments error');
     },
 
     setUiLoading: function() {
-        $('.comments-list').removeClass().addClass('comments-list loading');
+        $('.comments').removeClass().addClass('comments loading');
     },
 
     loadComments: function() {
 
         //Borramos todo antes de cargar
-        $(".comments-list").empty();
+        $(".list").empty();
 
         var self = this;
 
@@ -50,7 +50,7 @@ module.exports = {
           contentToAdd += '<div id="name-comment">' + comments[i].name + '&nbsp' + comments[i].lastName + '</div>' + '<li id="new-comment">' + comments[i].comment + '<button class="delete-button" data-id="' + comments[i].id + '" title="delete">&times;</button></li>';
         }
 
-        $(".comments-list").append(contentToAdd);
+        $(".list").append(contentToAdd);
         $('.comments-number').html('').append(comments.length);
     },
 

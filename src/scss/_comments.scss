@@ -1,3 +1,13 @@
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .comments {
     display: flex;
     flex-direction: column;
@@ -11,45 +21,78 @@
         width: 1064px;
     }
 
-    .comments-list {
+    .list {
         padding: 0;
-        margin: 20px 10px;
+        margin: 0;
+    }
+
+    li {
+        list-style: none;
+        padding: 20px 10px;
+        @include if-is-large-screen {
+            padding: 10px 30px 20px;
+        }
+    }
+    //ocultamos todos los div que tengan la clase ui-
+    div[class^="ui-"] {
+        display: none;
+    }
+    //estado ideal
+    &.ideal .ui-ideal {
+        display: block;
+        margin: 10px;
+        @include if-is-large-screen {
+            margin: 0;
+        }
+    }
+    // estado en blanco vacío
+    &.blank .ui-blank {
+        display: block;
+        align-self: center;
+    }
+    // estado error
+    &.error .ui-error {
+        display: block;
+        align-self: center;
+        margin-bottom: 20px;
+    }
+    // estado cargando
+    &.loading .ui-loading {
+        display: block;
+        align-self: center;
+        border: 5px solid #f3f3f3;
+        animation: spin 1s linear infinite;
+        border-top: 5px solid #555;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
     }
 
     .title-add-comments,
     .title-comments {
+        align-self: center;
         font-size: $font-size-large;
         color: $color-grey;
-        padding: 20px 10px 0;
+        padding: 20px 10px;
+        margin-bottom: 10px;
         @include if-is-large-screen {
             padding: 20px 30px 10px;
         }
     }
 
-    .list-comments {
-        @include if-is-large-screen {
-            margin: auto;
-            width: 100%;
-        }
-        @include if-is-large-screen {
-            width: 1064px;
-        }
-
-        li {
-            list-style: none;
-            padding: 20px 10px;
-            @include if-is-large-screen {
-                padding: 10px 30px 20px;
-            }
-        }
-    }
-
     #name-comment {
-        padding: 20px 0;
+        display: flex;
+        padding: 10px 0;
+        width: auto;
         color: $color-elven-song;
         font-size: $font-size-base+3;
         @include if-is-large-screen {
-            padding-left: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        @include if-is-desktop-screen {
+            width: 1024px;
         }
     }
 
@@ -60,7 +103,15 @@
         border-radius: 20px;
         list-style: none;
         background-color: white;
-        border: 1px solid $color-grey;
+        margin-bottom: 20px;
+        @include if-is-large-screen {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        @include if-is-desktop-screen {
+            margin: 0 20px 20px;
+            width: 1004px;
+        }
 
         .delete-button {
             align-self: flex-start;
