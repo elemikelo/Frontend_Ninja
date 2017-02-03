@@ -2,40 +2,81 @@ var $ = require('jquery');
 var CommentsService = require('./CommentsService');
 var CommentsListManager = require('./CommentsListManager');
 
-$('.new-comment-form').on('submit', function () {
+var form = $(".new-comment-form");
+var comentariosTextarea = $('#comment');
+var inputEmail = $('#email');
+var inputName = $('#name');
+var inputLastName = $('#last_name');
+var patternEmail = /[\w-\.]{2,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
 
-    var inputs = $(this).find("input").each(function(){
-        var input = this;
-        if (input.checkValidity() == false) {
-            alert(input.validationMessage);
-            input.focus();
-            return false;
-        }
-    });
+var stateButton = {
+    enabled: function() {
+        form.find("button").text("Add Comment").attr("disabled", false);
+    },
+    disabled: function() {
+        form.find("button").text("Saving Comment...").attr("disabled", true);
+    }
+}
 
-    //datos comentarios
+function countWords (phrase) {
+  var phraseReplaceSpaces = phrase.replace(/\s\s+/g, ' ').trim();
+  var arrayOfWords = phraseReplaceSpaces.split(' ');
+  var numberOfWords = arrayOfWords.length;
+  return numberOfWords;
+}
 
-    var comment = {
-      comment: $("#comment").val(),
-      name: $("#name").val(),
-      lastName: $("#last_name").val(),
-      email: $("#email").val()
+form.submit(function () {
+
+    if(!inputName.val()) {
+			alert("Escribe tu nombre");
+			inputName.focus();
+			event.preventDefault();
+			return false;
+		}
+
+    if(!inputLastName.val()) {
+			alert("Escribe tu apellido");
+			inputLastName.focus();
+			event.preventDefault();
+			return false;
+		}
+
+    if(!inputEmail.val() || !patternEmail.test(inputEmail.val().trim())) {
+			alert("Escribe tu email correctamente");
+			inputEmail.focus();
+			event.preventDefault();
+			return false;
+		}
+
+    if (countWords(comentariosTextarea.val()) > 120) {
+			alert('Máximo 120 palabras');
+			comentariosTextarea.focus();
+			event.preventDefault();
+			return false;
+		}
+
+    stateButton.disabled();
+
+    var self = this;
+
+    var dataComment = {
+        comment: $("#comment").val(),
+        name: $("#name").val(),
+        lastName: $("#last_name").val(),
+        email: $("#email").val()
     }
 
-    //bloqueo de boton
-    $(this).find("button").text("Saving Comment...").attr("disabled", true);
-    var disableButton = $(this).find("button").text("Add Comment").attr("disabled", false);
-    var self = this;
-    
-    // lo enviamos al backend
-    CommentsService.save(comment, function(data) { // si se guarda bien
-        disableButton;
-        CommentsListManager.loadComments();
-        self.reset(); //reseteamos el formulario
-    }, function(error) { // si no se guarda
-        alert("Se ha producido un error");
-        disableButton;
-    })
-    return false; // no queremos enviar el formulario nunca
+       ///// send backend //////
 
-  });
+    CommentsService.save(dataComment, function(data) {
+        alert("Thank you");
+        stateButton.enabled();
+        CommentsListManager.loadComments();
+        self.reset();
+    }, function(error) {
+        alert("error");
+        stateButton.enabled();
+    });
+
+    return false;
+});

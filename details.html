@@ -54,24 +54,26 @@
 
           <section class="comments" id="comments">
             <div class="title-comments">Comments</div>
-            <!-- <div class="comments-list"> -->
               <div class="ui-ideal"><ul class="list"></ul></div>
               <div class="ui-error">Se ha producido un error</div>
-              <div class="ui-blank"><p>Aún no hay ningun comentario. Se el primero en comentar.</p></div>
+              <div class="ui-blank"><p>Aún no hay ningún comentario. Sé el primero en comentar.</p></div>
               <div class="ui-loading"></div>
-            <!-- </div> -->
 
             <div class="add-comments">
               <div class="title-add-comments">Add your comment</div>
               <form class="new-comment-form" novalidate>
                 <div class="item-1">
-                  <input type="text" name="name" id="name" class="name" placeholder="Name">
-                  <input type="text" name="last-name" id="last_name" class="last-name" placeholder="Last Name">
-                  <input type="text" name="email" id="email" class="email" placeholder="Email">
+                  <label for="name"></label>
+                  <input type="text" name="name" id="name" class="name validator" placeholder="Name" required>
+                  <label for="last-name"></label>
+                  <input type="text" name="last-name" id="last_name" class="last-name validator" placeholder="Last Name" required>
+                  <label for="email"></label>
+                  <input type="text" name="email" id="email" class="email validator" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" required>
                 </div>
                 <div class="item-2">
-                  <textarea  name="comment" class="comment" id="comment" placeholder="Write your comment!"></textarea>
-                  <button>Add Comment</button>
+                  <label for="comment"></label>
+                  <textarea  name="comment" class="comment validator" id="comment" placeholder="Write your comment! Max 120 words" required></textarea>
+                  <button class="submit">Add Comment</button>
                 </div>
               </form>
             </div>

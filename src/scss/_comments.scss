@@ -182,6 +182,7 @@
             }
 
             textarea {
+
                 @extend input;
                 @include if-is-medium-screen {
                     height: 75px;
