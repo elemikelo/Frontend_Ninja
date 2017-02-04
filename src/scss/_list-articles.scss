@@ -22,15 +22,10 @@
             max-width: 100%;
             padding: 80px 0 40px;
             @include if-is-medium-screen {
-                padding-right: 10px;
-                width: 50%;
-                height: 250px;
-                padding-left: 10px;
+                max-width: 364px;
+                padding: 60px 10px 0 10px
             }
-            @include if-is-large-screen {
-                max-width: 400px;
-                height: 250px;
-            }
+
         }
 
         .container-content {
@@ -107,6 +102,7 @@
 
                     &:focus {
                         outline: none;
+
                     }
                 }
 
