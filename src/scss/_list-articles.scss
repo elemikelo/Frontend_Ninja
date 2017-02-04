@@ -106,8 +106,7 @@
                     transition: background-image 0.2s ease-in-out;
 
                     &:focus {
-                        outline-color: $color-primary;
-                        background-color: darken(white, 5%);
+                        outline: none;
                     }
                 }
 

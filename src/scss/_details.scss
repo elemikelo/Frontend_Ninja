@@ -5,6 +5,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    @include if-is-medium-screen {
+        padding: 0 10px;
+        }
 
     .container-article {
         padding-bottom: 40px;
@@ -49,13 +52,7 @@
             .img-article {
                 order: 1;
                 max-width: 100%;
-                @include if-is-medium-screen {
-                    padding: 40px 10px;
-                    height: 442px;
-                }
-                @include if-is-large-screen {
-                    height: 575px;
-                }
+
             }
         }
 
@@ -101,11 +98,8 @@
                     background-color: transparent;
                     background-position: center;
                     transition: background-image 0.2s ease-in-out;
-
-
                     &:focus {
-                        outline-color: $color-primary;
-                        background-color: darken(white, 5%);
+                        outline: none;
                     }
                 }
 
@@ -122,11 +116,8 @@
                     color: $color-primary;
                     cursor: pointer;
                     width: auto;
-
-
                     &:focus {
-                        outline-color: $color-primary;
-                        background-color: darken(white, 5%);
+                        outline: none;
                     }
 
                     .icon-comment {

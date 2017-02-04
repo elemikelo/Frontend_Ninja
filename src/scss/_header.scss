@@ -87,6 +87,7 @@ $header-title-font: $titles-font-family;
                             box-sizing: border-box;
                             display: block;
                             color: $color-white;
+                            font-size: $font-size-base+1;
                             text-shadow: 1px 1px 0 darken($header-background-color, 30%);
                             padding: 20px;
 

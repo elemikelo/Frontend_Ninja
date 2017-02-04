@@ -21,7 +21,7 @@
               <li><a href="#" class="name-category">Health</a></li>
               <li><a href="#" class="name-category">More</a></li>
               <li><a href="#" class="name-category"><img class="icono-user" src="./src/img/icons/icon-user.png" alt="Icon user" title="icon sign in"></img>Sign in</a></li>
-              <li><input class="input-search" type="text"  placeholder="Search..."></li>
+              <li><input type="search" class="input-search"   placeholder="Search..."></li>
             </ul>
           </nav>
         </div>
@@ -33,7 +33,14 @@
               <div class="container-content">
                 <div class="container-title">
                   <div class="title-article">Batman Begins: Why Christopher Nolan's origin story is the series' best</div>
-                  <img class="img-article" src="./src/img/articles/cine.jpg" alt="article cine" title="Image Batman">
+                  <picture>
+                    <source class="img-article" srcset="./dist/img/articles/cine-375px.jpg 375w" media="(max-width: 400px)">
+                      <source class="img-article" srcset="./dist/img/articles/cine-667px.jpg 667w" media="(max-width: 700px)">
+                      <source class="img-article" srcset="./dist/img/articles/cine-768px.jpg 768w" media="(max-width: 780px)">
+                      <source class="img-article" srcset="./dist/img/articles/cine-984px.jpg 984w.jpg 768w" media="(max-width: 1000px)">
+                      <source class="img-article" srcset="./dist/img/articles/cine-1024px.jpg 1024px" media="(min-width: 1010px)">
+                    <img class="img-article" src="./dist/img/articles/cine-1024px.jpg" title="Image Batman">
+                </picture>
                 </div>
                 <div class="container-content-details">
                   <img class="photo-author-article" src="./src/img/authors/stevejobs.jpg"  alt="author img">
@@ -68,7 +75,7 @@
                   <label for="last-name"></label>
                   <input type="text" name="last-name" id="last_name" class="last-name" placeholder="Last Name" required>
                   <label for="email"></label>
-                  <input type="text" name="email" id="email" class="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" required>
+                  <input type="email" name="email" id="email" class="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" required>
                 </div>
                 <div class="item-2">
                   <label for="comment"></label>
