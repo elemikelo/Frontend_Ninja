@@ -50,9 +50,9 @@ module.exports = {
         //Borramos todo antes de cargar
         $(".list").empty();
         $(".list").append(contentToAdd);
-        $('.comments-number').html('').append(comments.length);
+        // $('.comments-number').html('').append(comments.length);
 
-        return 8;
+
     },
 
     deleteComment: function(commentId) {

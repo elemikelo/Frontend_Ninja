@@ -13,7 +13,6 @@ $(document).ready(function() {
         } else {
             if (!load) {
                 CommentsListManager.setUiLoading();
-                console.log(CommentsListManager.renderComments());
             }
         }
     })

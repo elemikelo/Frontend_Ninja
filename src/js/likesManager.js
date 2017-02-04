@@ -2,8 +2,8 @@ var $ = require('jquery');
 var webStorage = require('./webStorage');
 
 var button = $(".btn-like");
-var urlLike = 'url("../src/img/icons/icon-like-click.svg") no-repeat center';
-var urlUnLike = 'url("../src/img/icons/icon-like.svg") no-repeat center';
+var urlLike = 'url("../src/img/icons/icon-like-click.png") no-repeat center';
+var urlUnLike = 'url("../src/img/icons/icon-like.png") no-repeat center';
 
 // para pintarlo
   for (var i = 0; i < button.length; i++) {
