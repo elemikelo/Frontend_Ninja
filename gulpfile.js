@@ -1,5 +1,5 @@
-var gulp = require('gulp'); // importamos gulp
-var sass = require('gulp-sass'); // importamos sass
+var gulp = require('gulp');
+var sass = require('gulp-sass');
 var notify = require('gulp-notify');
 var browserSync = require('browser-sync').create();
 var browserify = require('browserify');
@@ -12,7 +12,7 @@ var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
 var imagemin = require('gulp-imagemin');
 var responsive = require('gulp-responsive');
-// var spritesmith = require('gulp.spritesmith');
+var spritesmith = require('gulp.spritesmith');
 var envify = require('envify/custom');
 var gutil = require('gulp-util');
 
@@ -222,18 +222,18 @@ var imagesConfig = {
     ]}
 };
 
-// var sprites = {
-//     spritesTaskName: 'sprites',
-//     imgSrc: './src/img/sprites/*.png',
-//     imgName: 'sprite.png',
-//     cssName: '_sprite.scss',
-//     imgDest: './dist/img/',
-//     cssDest: './src/scss/',
-//     imgPath: 'img/sprite.png'
-// };
+var sprites = {
+    spritesTaskName: 'sprites',
+    imgSrc: './src/img/sprites/*.png',
+    imgName: 'sprite.png',
+    cssName: '_sprite.scss',
+    imgDest: './dist/img/',
+    cssDest: './src/scss/',
+    imgPath: 'img/sprite.png'
+};
 
 // definimos la tarea por defecto
-gulp.task("default", [sassConfig.compileSassTaskName, jsConfig.concatJsTaskName, imagesConfig.imagesTaskName], function(){
+gulp.task("default", [sassConfig.compileSassTaskName, jsConfig.concatJsTaskName,imagesConfig.imagesTaskName,sprites.spritesTaskName], function(){
 
     // arrancar el servidor de browser sync
     browserSync.init({
@@ -305,14 +305,14 @@ gulp.task(imagesConfig.imagesTaskName, function(){
     .pipe(gulp.dest(imagesConfig.dest));
 });
 
-// // generación de spritesheets
-// gulp.task(sprites.spritesTaskName, function(){
-//     var spriteData = gulp.src(sprites.imgSrc).
-//     pipe(spritesmith({
-//         imgName: sprites.imgName,
-//         cssName: sprites.cssName,
-//         imgPath: sprites.imgPath
-//     }));
-//     spriteData.img.pipe(gulp.dest(sprites.imgDest));
-//     spriteData.css.pipe(gulp.dest(sprites.cssDest));
-// });
+// generación de spritesheets
+gulp.task(sprites.spritesTaskName, function(){
+    var spriteData = gulp.src(sprites.imgSrc).
+    pipe(spritesmith({
+        imgName: sprites.imgName,
+        cssName: sprites.cssName,
+        imgPath: sprites.imgPath
+    }));
+    spriteData.img.pipe(gulp.dest(sprites.imgDest));
+    spriteData.css.pipe(gulp.dest(sprites.cssDest));
+});

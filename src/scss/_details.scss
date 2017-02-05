@@ -85,6 +85,8 @@
                 align-items: flex-start;
 
                 .btn-like {
+                    display: flex;
+                    justify-content: center;
                     margin: 2px;
                     border-radius: 5px;
                     padding: 6px 9px 3px 8px;
@@ -116,13 +118,13 @@
                     color: $color-primary;
                     cursor: pointer;
                     width: auto;
+
                     &:focus {
-                        outline: none;
+                        outline-color: $color-primary;
+                        background-color: darken(white, 5%);
                     }
 
                     .icon-comment {
-                        padding: 15px 9px 3px 8px;
-                        background: url("../src/img/icons/icon-comment.png") no-repeat;
                         background-color: transparent;
                     }
 

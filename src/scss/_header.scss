@@ -31,6 +31,7 @@ $header-title-font: $titles-font-family;
         .container-category {
             margin-left: auto;
 
+
             #btn-menu {
                 display: none;
 
@@ -85,16 +86,19 @@ $header-title-font: $titles-font-family;
                     li {
                         .name-category {
                             box-sizing: border-box;
-                            display: block;
+                            display: flex;
                             color: $color-white;
                             font-size: $font-size-base+1;
                             text-shadow: 1px 1px 0 darken($header-background-color, 30%);
                             padding: 20px;
 
-                            .icono-user {
+                            .icon-user {
+                              @extend .icon-user;
+                                border: 0;
                                 position: relative;
                                 top: 2px;
-                                padding-right: 5px;
+                                background-color: transparent;
+                                border: 0;
                             }
 
                             &:hover {
