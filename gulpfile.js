@@ -40,186 +40,288 @@ var uglifyConfig = {
 
 var imagesConfig = {
     imagesTaskName: "optimize-images",
-    src: "src/img/articles/*",
-    dest: "./dist/img/articles",
+    src: "src/img/*",
+    dest: "./dist/img",
     responsive: {
-        'cine.jpg': [
-            {
+        'cine.jpg': [{
                 width: 1024,
-                rename: { suffix: '-1024px' }
+                rename: {
+                    suffix: '-1024px'
+                }
             },
             {
                 width: 984,
-                rename: { suffix: '-984px' }
+                rename: {
+                    suffix: '-984px'
+                }
             },
             {
                 width: 768,
-                rename: { suffix: '-768px' }
+                rename: {
+                    suffix: '-768px'
+                }
             },
             {
                 width: 400,
-                rename: { suffix: '-400px' }
+                rename: {
+                    suffix: '-400px'
+                }
             },
             {
                 width: 667,
-                rename: { suffix: '-667px' }
+                rename: {
+                    suffix: '-667px'
+                }
             },
 
             {
                 width: 384,
-                rename: { suffix: '-384px' }
+                rename: {
+                    suffix: '-384px'
+                }
             },
             {
                 width: 375,
-                rename: { suffix: '-375px' }
+                rename: {
+                    suffix: '-375px'
+                }
             }
         ],
 
-        'commerce.jpg': [
-            {
+        'commerce.jpg': [{
                 width: 400,
-                rename: { suffix: '-400px' }
+                rename: {
+                    suffix: '-400px'
+                }
             },
             {
                 width: 384,
-                rename: { suffix: '-384px' }
+                rename: {
+                    suffix: '-384px'
+                }
             },
             {
                 width: 667,
-                rename: { suffix: '-667px' }
+                rename: {
+                    suffix: '-667px'
+                }
             },
             {
                 width: 375,
-                rename: { suffix: '-375px' }
+                rename: {
+                    suffix: '-375px'
+                }
             }
         ],
 
-        'fashion.jpg': [
-          {
-              width: 400,
-              rename: { suffix: '-400px' }
-          },
-          {
-              width: 384,
-              rename: { suffix: '-384px' }
-          },
-          {
-              width: 667,
-              rename: { suffix: '-667px' }
-          },
-          {
-              width: 375,
-              rename: { suffix: '-375px' }
-          }
-      ],
-        'music.jpg': [
-          {
-              width: 400,
-              rename: { suffix: '-400px' }
-          },
-          {
-              width: 384,
-              rename: { suffix: '-384px' }
-          },
-          {
-              width: 667,
-              rename: { suffix: '-667px' }
-          },
-          {
-              width: 375,
-              rename: { suffix: '-375px' }
-          }
-      ],
-        'politics.jpg': [
-          {
-              width: 400,
-              rename: { suffix: '-400px' }
-          },
-          {
-              width: 384,
-              rename: { suffix: '-384px' }
-          },
-          {
-              width: 667,
-              rename: { suffix: '-667px' }
-          },
-          {
-              width: 375,
-              rename: { suffix: '-375px' }
-          }
-      ],
-        'skate.jpg': [
-          {
-              width: 400,
-              rename: { suffix: '-400px' }
-          },
-          {
-              width: 384,
-              rename: { suffix: '-384px' }
-          },
-          {
-              width: 667,
-              rename: { suffix: '-667px' }
-          },
-          {
-              width: 375,
-              rename: { suffix: '-375px' }
-          }
-      ],
-        'sport.jpg': [
-          {
-              width: 400,
-              rename: { suffix: '-400px' }
-          },
-          {
-              width: 384,
-              rename: { suffix: '-384px' }
-          },
-          {
-              width: 667,
-              rename: { suffix: '-667px' }
-          },
-          {
-              width: 375,
-              rename: { suffix: '-375px' }
-          }
-      ],
-        'tecno.jpg': [
-          {
-              width: 400,
-              rename: { suffix: '-400px' }
-          },
-          {
-              width: 384,
-              rename: { suffix: '-384px' }
-          },
-          {
-              width: 667,
-              rename: { suffix: '-667px' }
-          },
-          {
-              width: 375,
-              rename: { suffix: '-375px' }
-          }
-      ],
-      'social.jpg': [
-        {
-            width: 400,
-            rename: { suffix: '-400px' }
-        },
-        {
-            width: 384,
-            rename: { suffix: '-384px' }
-        },
-        {
-            width: 667,
-            rename: { suffix: '-667px' }
-        },
-        {
-            width: 375,
-            rename: { suffix: '-375px' }
-        }
-    ]}
+        'fashion.jpg': [{
+                width: 400,
+                rename: {
+                    suffix: '-400px'
+                }
+            },
+            {
+                width: 384,
+                rename: {
+                    suffix: '-384px'
+                }
+            },
+            {
+                width: 667,
+                rename: {
+                    suffix: '-667px'
+                }
+            },
+            {
+                width: 375,
+                rename: {
+                    suffix: '-375px'
+                }
+            }
+        ],
+        'music.jpg': [{
+                width: 400,
+                rename: {
+                    suffix: '-400px'
+                }
+            },
+            {
+                width: 384,
+                rename: {
+                    suffix: '-384px'
+                }
+            },
+            {
+                width: 667,
+                rename: {
+                    suffix: '-667px'
+                }
+            },
+            {
+                width: 375,
+                rename: {
+                    suffix: '-375px'
+                }
+            }
+        ],
+        'politics.jpg': [{
+                width: 400,
+                rename: {
+                    suffix: '-400px'
+                }
+            },
+            {
+                width: 384,
+                rename: {
+                    suffix: '-384px'
+                }
+            },
+            {
+                width: 667,
+                rename: {
+                    suffix: '-667px'
+                }
+            },
+            {
+                width: 375,
+                rename: {
+                    suffix: '-375px'
+                }
+            }
+        ],
+        'skate.jpg': [{
+                width: 400,
+                rename: {
+                    suffix: '-400px'
+                }
+            },
+            {
+                width: 384,
+                rename: {
+                    suffix: '-384px'
+                }
+            },
+            {
+                width: 667,
+                rename: {
+                    suffix: '-667px'
+                }
+            },
+            {
+                width: 375,
+                rename: {
+                    suffix: '-375px'
+                }
+            }
+        ],
+        'sport.jpg': [{
+                width: 400,
+                rename: {
+                    suffix: '-400px'
+                }
+            },
+            {
+                width: 384,
+                rename: {
+                    suffix: '-384px'
+                }
+            },
+            {
+                width: 667,
+                rename: {
+                    suffix: '-667px'
+                }
+            },
+            {
+                width: 375,
+                rename: {
+                    suffix: '-375px'
+                }
+            }
+        ],
+        'tecno.jpg': [{
+                width: 400,
+                rename: {
+                    suffix: '-400px'
+                }
+            },
+            {
+                width: 384,
+                rename: {
+                    suffix: '-384px'
+                }
+            },
+            {
+                width: 667,
+                rename: {
+                    suffix: '-667px'
+                }
+            },
+            {
+                width: 375,
+                rename: {
+                    suffix: '-375px'
+                }
+            }
+        ],
+        'social.jpg': [{
+                width: 400,
+                rename: {
+                    suffix: '-400px'
+                }
+            },
+            {
+                width: 384,
+                rename: {
+                    suffix: '-384px'
+                }
+            },
+            {
+                width: 667,
+                rename: {
+                    suffix: '-667px'
+                }
+            },
+            {
+                width: 375,
+                rename: {
+                    suffix: '-375px'
+                }
+            }
+        ],
+        'placeholder.jpg': [{
+                width: 32,
+                rename: {
+                    suffix: '-32px'
+                }
+            },
+
+        ],
+        'darthvader.jpg': [{
+                width: 32,
+                rename: {
+                    suffix: '-32px'
+                }
+            },
+
+        ],
+        'stevejobs.jpg': [{
+                width: 32,
+                rename: {
+                    suffix: '-32px'
+                }
+            },
+
+        ],
+        'billgates.jpg': [{
+                width: 32,
+                rename: {
+                    suffix: '-32px'
+                }
+            },
+
+        ]
+    }
 };
 
 var sprites = {
@@ -233,7 +335,7 @@ var sprites = {
 };
 
 // definimos la tarea por defecto
-gulp.task("default", [sassConfig.compileSassTaskName, jsConfig.concatJsTaskName,imagesConfig.imagesTaskName,sprites.spritesTaskName], function(){
+gulp.task("default", [sassConfig.compileSassTaskName, jsConfig.concatJsTaskName, imagesConfig.imagesTaskName, sprites.spritesTaskName], function() {
 
     // arrancar el servidor de browser sync
     browserSync.init({
@@ -248,65 +350,69 @@ gulp.task("default", [sassConfig.compileSassTaskName, jsConfig.concatJsTaskName,
     gulp.watch(jsConfig.watchFiles, [jsConfig.concatJsTaskName]);
 
     // cuando se cambie el html, recarga el navegador
-    gulp.watch('./*.html', function(){
-        browserSync.reload();  // recarga navegador
+    gulp.watch('./*.html', function() {
+        browserSync.reload(); // recarga navegador
         notify().write("Navegador recargado"); // mostramos notificación
     });
 });
 
 // compila sass
-gulp.task(sassConfig.compileSassTaskName, function(){
-    gulp.src(sassConfig.entryPoint)    // cargo el style.scss
-    .pipe(sourcemaps.init())    // empezamos a capturar los sourcemaps
-    .pipe(sass().on('error', function(error){ // compilamos sass
-        return notify().write(error); // si ocurre un error, mostramos notifiación
-    }))
-    .pipe(postcss([autoprefixer(), cssnano()])) // autoprefija el css y lo minifica
-    .pipe(sourcemaps.write('./'))   // terminamos de capturar los sourcemaps
-    .pipe(gulp.dest(sassConfig.dest))      // dejo el resultado en ./dist/
-    .pipe(browserSync.stream())     // recargamos el CSS en el navegador
-    .pipe(notify("SASS Compilado 🤘"));
+gulp.task(sassConfig.compileSassTaskName, function() {
+    gulp.src(sassConfig.entryPoint) // cargo el style.scss
+        .pipe(sourcemaps.init()) // empezamos a capturar los sourcemaps
+        .pipe(sass().on('error', function(error) { // compilamos sass
+            return notify().write(error); // si ocurre un error, mostramos notifiación
+        }))
+        .pipe(postcss([autoprefixer(), cssnano()])) // autoprefija el css y lo minifica
+        .pipe(sourcemaps.write('./')) // terminamos de capturar los sourcemaps
+        .pipe(gulp.dest(sassConfig.dest)) // dejo el resultado en ./dist/
+        .pipe(browserSync.stream()) // recargamos el CSS en el navegador
+        .pipe(notify("SASS Compilado 🤘"));
 });
 
 // concatena js
-gulp.task(jsConfig.concatJsTaskName, function(){
+gulp.task(jsConfig.concatJsTaskName, function() {
     gulp.src(jsConfig.entryPoint)
-    .pipe(tap(function(file){ // para cada archivo seleccionado
-        // lo pasamos por browserify para importar los require
-        file.contents = browserify(file.path, { debug:true })
-        .transform(envify(gutil.env))  // nos permite leer variables de entorno con process.env
-        .bundle()
-        .on('error', function(error){
-            return notify().write(error); // si ocurre un error javascript, lanza notificación
-        });
-    }))
-    .pipe(buffer()) // convertimos a buffer para que funcione el siguiente pipe
-    .pipe(sourcemaps.init({ loadMaps: true }))    // empezamos a capturar los sourcemaps
-    .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop()) // minificamos el código si es para producción
-    .pipe(sourcemaps.write('./'))   // terminamos de capturar los sourcemaps
-    .pipe(gulp.dest(jsConfig.dest))
-    .pipe(notify("JS Concatenado 💪"))
-    .pipe(browserSync.stream());
+        .pipe(tap(function(file) { // para cada archivo seleccionado
+            // lo pasamos por browserify para importar los require
+            file.contents = browserify(file.path, {
+                    debug: true
+                })
+                .transform(envify(gutil.env)) // nos permite leer variables de entorno con process.env
+                .bundle()
+                .on('error', function(error) {
+                    return notify().write(error); // si ocurre un error javascript, lanza notificación
+                });
+        }))
+        .pipe(buffer()) // convertimos a buffer para que funcione el siguiente pipe
+        .pipe(sourcemaps.init({
+            loadMaps: true
+        })) // empezamos a capturar los sourcemaps
+        .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop()) // minificamos el código si es para producción
+        .pipe(sourcemaps.write('./')) // terminamos de capturar los sourcemaps
+        .pipe(gulp.dest(jsConfig.dest))
+        .pipe(notify("JS Concatenado 💪"))
+        .pipe(browserSync.stream());
 });
 
 // minifica js
-gulp.task(uglifyConfig.uglifyTaskName, function(){
+gulp.task(uglifyConfig.uglifyTaskName, function() {
     gulp.src(uglifyConfig.src)
-    .pipe(uglify())
-    .pipe(gulp.dest(uglifyConfig.dest))
-    .pipe(notify("JS Minificado"));
+        .pipe(uglify())
+        .pipe(gulp.dest(uglifyConfig.dest))
+        .pipe(notify("JS Minificado"));
 });
 
 //optimiza las imagenes
-gulp.task(imagesConfig.imagesTaskName, function(){
+gulp.task(imagesConfig.imagesTaskName, function() {
     gulp.src(imagesConfig.src)
-    .pipe(responsive(imagesConfig.responsive))  // genera las imágenes responsive
-    .pipe(imagemin())   // optimiza el tamaño de las imagenes
-    .pipe(gulp.dest(imagesConfig.dest));
+        .pipe(responsive(imagesConfig.responsive)) // genera las imágenes responsive
+        .pipe(imagemin()) // optimiza el tamaño de las imagenes
+        .pipe(gulp.dest(imagesConfig.dest));
 });
 
 // generación de spritesheets
-gulp.task(sprites.spritesTaskName, function(){
+gulp.task(sprites.spritesTaskName, function() {
     var spriteData = gulp.src(sprites.imgSrc).
     pipe(spritesmith({
         imgName: sprites.imgName,
