@@ -3,8 +3,7 @@ var webStorage = require('./webStorage');
 
 var button = $(".btn-like");
 
-
-// para pintarlo
+// Añado al cargar la pagina la clase con su imagen correspondiente
   for (var i = 0; i < button.length; i++) {
     if (webStorage.get($(button[i]).attr("id")) == 'true'){
         $(button[i]).find('div').removeClass().addClass('icon-like-click');
@@ -16,7 +15,7 @@ var button = $(".btn-like");
     }
   }
 
-// Recorre para ver si hacen like
+// Recorre para ver si hacen click sobre el boton like
 for (var i = 0; i < button.length; i++) {
   $(button[i]).on('click', function(event){
     if ($(this).val() == 'false') {

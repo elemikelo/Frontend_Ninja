@@ -3,6 +3,28 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    picture{
+      @include if-is-medium-screen {
+          width: 384px;
+      }
+      @include if-is-large-screen {
+          width: 400px;
+      }
+    }
+    video{
+      max-width: 100%;
+      height: auto;
+      padding: 80px 0 40px;
+      @include if-is-medium-screen {
+        max-width: 364px;
+        padding: 60px 10px 0;
+        height: 336px;
+        padding-top: 10px;
+      }
+      @include if-is-mobile-landscape-screen {
+        padding-left: 14px
+      }
+    }
 
     .container-article {
         background-color: $color-white;
@@ -13,6 +35,8 @@
             flex-wrap: nowrap;
             padding-top: 20px;
             @include if-is-large-screen {
+                flex-wrap: nowrap;
+                flex-direction: row;
                 width: 1024px;
                 padding: 20px 20px 0;
             }
@@ -29,6 +53,8 @@
         }
 
         .container-content {
+            display: flex;
+            flex-direction: column;
             @include if-is-medium-screen {
                 padding-top: 80px;
             }
@@ -55,6 +81,7 @@
             flex-wrap: wrap;
             height: auto;
             padding: 10px;
+            padding-top: 20px;
 
             .photo-author-article {
                 align-self: center;

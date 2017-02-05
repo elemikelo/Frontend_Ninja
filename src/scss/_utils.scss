@@ -39,5 +39,11 @@
 @mixin if-is-desktop-screen {
   @media all and (min-width: #{$desktop-screen-width}){
      @content;
+    }
  }
- }
+ @mixin if-is-mobile-landscape-screen {
+   @media all and (min-width: #{$mobile-landscape-iphone-5-5}){
+      @content;
+   }
+  }
+ 
